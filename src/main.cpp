@@ -7,14 +7,14 @@
 #include <Adafruit_INA219.h>
 
 // ------------ 1. CONFIGURATION & CREDENTIALS ------------
-const char* ssid = "Andrea's Galaxy S24";
-const char* password = "cdjb0132";
+const char* ssid = "";
+const char* password = "";
 const char* mqtt_server = "broker.hivemq.com"; 
 
 // TTN LoRaWAN Credentials
 uint64_t joinEUI = 0x0000000000000000; 
-uint64_t devEUI  = 0x70B3D57ED0076985; 
-uint8_t appKey[]  = { 0xE0, 0x9A, 0x93, 0xC8, 0xAE, 0x12, 0x13, 0x47, 0x75, 0x8F, 0x38, 0xCA, 0x40, 0xA0, 0xDA, 0xFD };
+uint64_t devEUI  = 0x0000000000000000; 
+uint8_t appKey[]  = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
 #define NSS 8
 #define DIO1 14
