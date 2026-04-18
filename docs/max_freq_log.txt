@@ -1,0 +1,9 @@
+ *  Executing task in folder PROVA_SINGOLO: C:\Users\afoli\.platformio\penv\Scripts\platformio.exe device monitor --environment max_freq --port COM12 
+
+--- Terminal on COM12 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+Starting ADC Max Frequency Test...
+Time taken for 100000 samples: 6.111358 seconds
+MAXIMUM SAMPLING FREQUENCY: 16362.97 Hz
