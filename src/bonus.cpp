@@ -3,15 +3,10 @@
 #include <vector>
 #include <algorithm>
 
-// ==========================================
-// BONUS ASSIGNMENT PARAMETERS
-// Change these to populate your report tables
-// ==========================================
-#define ANOMALY_PROB 0.01      // Test: 0.01 (1%), 0.05 (5%), 0.10 (10%)
-#define FILTER_WINDOW 15       // Test: 5, 15, 31
-#define THRESHOLD_MULTIPLIER 3.0 // 3-sigma rule
-
-// ==========================================
+// PARAMETERS
+#define ANOMALY_PROB 0.01          // Test: 0.01 (1%), 0.05 (5%), 0.10 (10%)
+#define FILTER_WINDOW 15           // Test: 5, 15, 31
+#define THRESHOLD_MULTIPLIER 3.0   // 3-sigma rule
 
 #define SAMPLES 128
 #define SAMPLING_FREQ 100.0
