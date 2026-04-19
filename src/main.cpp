@@ -15,6 +15,7 @@ uint64_t joinEUI = 0x0000000000000000;
 uint64_t devEUI  = 0x0000000000000000; 
 uint8_t appKey[]  = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
+#define SIGNAL_TEST_MODE 2
 #define NSS 8
 #define DIO1 14
 #define NRST 12
@@ -53,7 +54,14 @@ void TaskSensor(void *pvParameters) {
 
   for(;;) {
     float t = millis() / 1000.0;
-    float signal = 3.0 * sin(2 * PI * 4 * t) + 1.5 * sin(2 * PI * 8 * t);
+    float signal = 0.0;
+    #if SIGNAL_TEST_MODE == 1
+        signal = 5.0 * sin(2 * PI * 1 * t);
+    #elif SIGNAL_TEST_MODE == 2
+        signal = 3.0 * sin(2 * PI * 4 * t) + 1.5 * sin(2 * PI * 8 * t);
+    #elif SIGNAL_TEST_MODE == 3
+        signal = 2.0 * sin(2 * PI * 35 * t);
+    #endif
     Serial.printf(">Signal:%.2f\n", signal);
     Serial.printf(">SamplingFreq:%d\n", current_sampling_hz);
 

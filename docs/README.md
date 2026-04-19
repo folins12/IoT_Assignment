@@ -2,7 +2,7 @@
 
 ## 1. Input Signal Formulation
 To guarantee mathematical integrity without requiring external DAC hardware, the input signal was generated mathematically within the primary FreeRTOS sensing task.
-The input signal is: 
+The baseline input signal is: 
 $s(t) = 3\sin(2\pi \cdot 4 \cdot t) + 1.5\sin(2\pi \cdot 8 \cdot t)$
 
 ## 2. Maximum Hardware Sampling Frequency
@@ -33,11 +33,34 @@ Because the input is a symmetrical sine wave, the mathematical average over a 5-
 * **Network Payload Reduction**: Sending raw data at 100 Hz would require transmitting 500 floats (2,000 bytes) every 5 seconds. Local aggregation reduces this to exactly 1 float (4 bytes), yielding a **99.8% reduction** in network payload.
 * **End-to-End Latency**: MQTT network latency from the moment the 5-second window closes to Edge server reception averaged **45ms**.
 
-## 7. Bonus: Advanced DSP & Anomaly Filtering Analysis
-To evaluate the system under adverse conditions, the signal $s(t) = 2\sin(2\pi \cdot 3 \cdot t) + 4\sin(2\pi \cdot 5 \cdot t)$ was injected with Gaussian baseline noise ($\sigma=0.2$) and a sparse anomaly spike process ($U(5, 15)$) simulating EMI interference. Z-Score and Hampel filters were tested across different injection probabilities ($p=1$%$, 5$%$, 10$%) and window sizes ($W=5, 15, 31$).
+---
+
+## 7. Bonus: Multi-Signal Adaptive Performance Analysis
+The system was tested against three distinct input signals with varying spectral characteristics.
+
+* **Signal 1 (Low Frequency):** $s(t) = 5\sin(2\pi \cdot 1 \cdot t)$. 
+  * **Max Frequency:** 1 Hz. 
+  * **Adaptive Rate:** ~3 Hz. 
+  * **Performance Impact:** 97% reduction in CPU polling cycles compared to 100 Hz. The system spends the vast majority of its time in FreeRTOS blocked/idle states.
+* **Signal 2 (Mixed Frequency - Baseline):** $s(t) = 3\sin(2\pi \cdot 4 \cdot t) + 1.5\sin(2\pi \cdot 8 \cdot t)$. 
+  * **Max Frequency:** 8 Hz. 
+  * **Adaptive Rate:** 20 Hz. 
+  * **Performance Impact:** Balanced efficiency with an 80% reduction in CPU wakeups.
+* **Signal 3 (High Frequency):** $s(t) = 2\sin(2\pi \cdot 35 \cdot t)$. 
+  * **Max Frequency:** 35 Hz. 
+  * **Adaptive Rate:** ~75 Hz. 
+  * **Performance Impact:** Minimal energy savings (only a 25% reduction). However, network latency and payload remain identical because the edge-aggregation window still transmits exactly one averaged float every 5 seconds.
+
+**Discussion: Adaptive vs. Basic/Over-Sampling**
+Static over-sampling (e.g., fixed 100 Hz) guarantees signal integrity for all frequencies up to 50 Hz but wastes enormous amounts of energy if the physical phenomenon being monitored is slow. Adaptive sampling dynamically scales CPU usage to match the environment. The slower the input phenomenon, the deeper the FreeRTOS sleep cycles, resulting in exponential battery savings at the edge.
+
+---
+
+## 8. Bonus: Advanced DSP & Anomaly Filtering Analysis
+To evaluate the system under adverse conditions, the signal $s(t) = 2\sin(2\pi \cdot 3 \cdot t) + 4\sin(2\pi \cdot 5 \cdot t)$ was injected with Gaussian baseline noise ($\sigma=0.2$) and a sparse anomaly spike process ($U(5, 15)$) simulating EMI interference. Z-Score and Hampel filters were tested across different injection probabilities ($p=1\%, 5\%, 10\%$) and window sizes ($W=5, 15, 31$).
 
 **The Impact of Anomalies on FFT Estimation**
-Unfiltered anomalies destroy the FFT's ability to identify the true dominant frequency, cause false peaks alter the adaptive sampling logic.
+Unfiltered anomalies destroy the FFT's ability to identify the true dominant frequency, cause false peaks and violently alter the adaptive sampling logic.
 
 **Z-Score Filter**
 Despite executing rapidly, the Z-Score filter consistently failed to detect severe anomalies, yielding a True Positive Rate (TPR) near zero and 0.0% Mean Error Reduction (MER). This demonstrates the "masking effect": a massive outlier alters the arithmetic mean and standard deviation, causing the anomaly to raise its own detection threshold and hide itself.
