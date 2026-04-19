@@ -1,4 +1,4 @@
-# IoT Edge Computing: Adaptive Sampling & Anomaly Filtering
+# IoT Individual Assignment
 **Hardware:** Heltec WiFi LoRa 32 V3 (ESP32-S3), INA219 Power Sensor  
 **Framework:** FreeRTOS (PlatformIO)
 
