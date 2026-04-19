@@ -2,8 +2,8 @@
 #include <arduinoFFT.h>
 #include <algorithm>
 
-float ANOMALY_PROB = 0.0;
-int FILTER_WINDOW = 0;
+#define ANOMALY_PROB 0.1    // 0.01 (1%), 0.05 (5%), 0.10 (10%)
+#define FILTER_WINDOW 15    // 5, 15, 31
 #define Z_THRESHOLD_MULTIPLIER 3.0  // 3-sigma rule for Z-Score
 #define SAMPLES 128
 #define SAMPLING_FREQ 100.0
@@ -179,48 +179,35 @@ void setup() {
 
 
 void loop() {
-    float probs_to_test[] = {0.01, 0.05, 0.10};
-    int windows_to_test[] = {5, 15, 31};
+    Serial.println("\n========================================");
+    Serial.printf("Testing at P=%.2f, WINDOW=%d\n", ANOMALY_PROB, FILTER_WINDOW);
+    
+    generateSignalBuffer();
 
-    for (int p_idx = 0; p_idx < 3; p_idx++) {
-        for (int w_idx = 0; w_idx < 3; w_idx++) {
-            for (int iter = 0; iter < 5; iter++) {
-                
-                ANOMALY_PROB = probs_to_test[p_idx];
-                FILTER_WINDOW = windows_to_test[w_idx];
+    double peak_unfiltered = getDominantFrequency(raw_signal);
+    Serial.printf("[UNFILTERED] FFT Peak: %.2f Hz\n", peak_unfiltered);
 
-                Serial.println("\n========================================");
-                Serial.printf("Testing at P=%.2f, WINDOW=%d\n", ANOMALY_PROB, FILTER_WINDOW);
-                
-                generateSignalBuffer();
+    FilterMetrics z = zscoreFilter();
+    double peak_z = getDominantFrequency(filtered_signal);
+    float z_tpr = 0.0;
+    if (z.total_anomalies > 0) 
+        z_tpr = (float)z.true_positives / z.total_anomalies;
+    int clean_samples_z = SAMPLES - z.total_anomalies;
+    float z_fpr = 0.0;
+    if (clean_samples_z > 0)
+        z_fpr = (float)z.false_positives / clean_samples_z;
+    Serial.printf("[Z-SCORE] Exec: %lu us | TPR: %.2f | FPR: %.2f | MER: %5.1f%% | FFT Peak: %.2f Hz\n", z.exec_time_us, z_tpr, z_fpr, z.mean_error_reduction, peak_z);
 
-                double peak_unfiltered = getDominantFrequency(raw_signal);
-                Serial.printf("[UNFILTERED] FFT Peak: %.2f Hz\n", peak_unfiltered);
+    FilterMetrics h = hampelFilter();
+    double peak_h = getDominantFrequency(filtered_signal);
+    float h_tpr = 0.0;
+    if (h.total_anomalies > 0)
+        h_tpr = (float)h.true_positives / h.total_anomalies;
+    int clean_samples_h = SAMPLES - h.total_anomalies;
+    float h_fpr = 0.0;
+    if (clean_samples_h > 0)
+        h_fpr = (float)h.false_positives / clean_samples_h;
+    Serial.printf("[HAMPEL]  Exec: %lu us | TPR: %.2f | FPR: %.2f | MER: %5.1f%% | FFT Peak: %.2f Hz\n", h.exec_time_us, h_tpr, h_fpr, h.mean_error_reduction, peak_h);
 
-                FilterMetrics z = zscoreFilter();
-                double peak_z = getDominantFrequency(filtered_signal);
-                float z_tpr = 0.0;
-                if (z.total_anomalies > 0) 
-                    z_tpr = (float)z.true_positives / z.total_anomalies;
-                int clean_samples_z = SAMPLES - z.total_anomalies;
-                float z_fpr = 0.0;
-                if (clean_samples_z > 0)
-                    z_fpr = (float)z.false_positives / clean_samples_z;
-                Serial.printf("[Z-SCORE] Exec: %lu us | TPR: %.2f | FPR: %.2f | MER: %5.1f%% | FFT Peak: %.2f Hz\n", z.exec_time_us, z_tpr, z_fpr, z.mean_error_reduction, peak_z);
-
-                FilterMetrics h = hampelFilter();
-                double peak_h = getDominantFrequency(filtered_signal);
-                float h_tpr = 0.0;
-                if (h.total_anomalies > 0)
-                    h_tpr = (float)h.true_positives / h.total_anomalies;
-                int clean_samples_h = SAMPLES - h.total_anomalies;
-                float h_fpr = 0.0;
-                if (clean_samples_h > 0)
-                    h_fpr = (float)h.false_positives / clean_samples_h;
-                Serial.printf("[HAMPEL]  Exec: %lu us | TPR: %.2f | FPR: %.2f | MER: %5.1f%% | FFT Peak: %.2f Hz\n", h.exec_time_us, h_tpr, h_fpr, h.mean_error_reduction, peak_h);
-
-                delay(1500);
-            }
-        }
-    }
+    delay(3000);
 }

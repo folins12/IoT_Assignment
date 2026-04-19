@@ -59,19 +59,28 @@ Static over-sampling (e.g., fixed 100 Hz) guarantees signal integrity for all fr
 ## 8. Bonus: Advanced DSP & Anomaly Filtering Analysis
 To evaluate the system under adverse conditions, the signal $s(t) = 2\sin(2\pi \cdot 3 \cdot t) + 4\sin(2\pi \cdot 5 \cdot t)$ was injected with Gaussian baseline noise ($\sigma=0.2$) and a sparse anomaly spike process ($U(5, 15)$) simulating EMI interference. Z-Score and Hampel filters were tested across different injection probabilities ($p=1\%, 5\%, 10\%$) and window sizes ($W=5, 15, 31$).
 
-**The Impact of Anomalies on FFT Estimation**
-Unfiltered anomalies destroy the FFT's ability to identify the true dominant frequency, cause false peaks and violently alter the adaptive sampling logic.
+**The Impact of Anomalies on FFT & Adaptive Sampling Energy**
+Unfiltered anomalies act as broadband impulses. Empirical logs show that unfiltered spikes consistently hide the true 5 Hz dominant frequency, generating false high-frequency peaks. 
+*Without filtering*, if the FFT incorrectly estimates a 35 Hz peak due to a spike, the adaptive logic will force the system to sample at >70 Hz. This unnecessary 6x increase in sampling frequency completely negates the energy-saving purpose of the IoT device. *With filtering* (Hampel), the true 5 Hz peak is preserved, allowing the system to sleep deeply and sample efficiently at ~12-15 Hz.
 
-**Z-Score Filter**
-Despite executing rapidly, the Z-Score filter consistently failed to detect severe anomalies, yielding a True Positive Rate (TPR) near zero and 0.0% Mean Error Reduction (MER). This demonstrates the "masking effect": a massive outlier alters the arithmetic mean and standard deviation, causing the anomaly to raise its own detection threshold and hide itself.
+**Z-Score Filter (Mean-Based Masking)**
+The Z-Score filter consistently failed to detect severe anomalies, yielding a True Positive Rate (TPR) near zero and nominal Mean Error Reduction (MER). This demonstrates the "masking effect": a massive outlier alters the arithmetic mean and standard deviation, causing the anomaly to raise its own detection threshold and hide itself.
 
-**Hampel Filter**
-The Hampel filter demonstrated superior detection. By relying on the median and the Median Absolute Deviation (MAD), the filter's central tendency remains tightly anchored to the underlying clean sine wave.
+**Hampel Filter (Median Robustness)**
+The Hampel filter demonstrated superior detection. By relying on the median and the Median Absolute Deviation (MAD), the filter's central tendency remains tightly anchored to the underlying clean sine wave, effectively stripping out outliers.
 
-**Algorithmic Complexity on Hardware**
-The linear $O(N)$ Z-Score executed in just **~600 µs** at $W=31$. In contrast, the sorting-dependent $O(N \log N)$ Hampel filter required **~3,400 µs** for the same window. 
+**Window Size Trade-offs: Empirical Measurement**
+The following table characterizes the trade-off empirically for the filters running at a 100 Hz baseline sampling rate (1 sample = 10 ms). Stack memory is calculated based on the dynamic arrays required for Hampel's median and MAD sorting ($W \times 4$ bytes $\times 2$).
 
-**Filter Window Optimization & The Over-Filtering Penalty**
-A narrow window ($W=5$) produced the highest MER (clearing over **70%** of corruption at $p=0.10$) while executing in just **~500 µs**. 
+| Window Size ($W$) | Exec. Time (Z-Score / Hampel) | End-to-End Delay Increase | Stack Memory (Hampel) | Hampel MER ($p=0.10$) |
+| :--- | :--- | :--- | :--- | :--- |
+| **$W=5$** | ~310 µs / ~510 µs | +50 ms | 40 Bytes | **~47% - 81%** (Optimal) |
+| **$W=15$** | ~435 µs / ~2,000 µs | +150 ms | 120 Bytes | ~33% - 66% |
+| **$W=31$** | ~620 µs / ~3,400 µs | +310 ms | 248 Bytes | ~6% - 38% (High Variance) |
 
-Expanding the window to $W=31$ in low-contamination scenarios ($p=0.01$) resulted in **severely negative MER values** (e.g., -232%). A median window that is too large attenuates and distorts the peaks of the high-frequency sine wave. This causes false positives and mathematical errors that are greater than those of raw noise.
+1. **Computational Effort & Energy:** The linear $O(N)$ Z-Score scales efficiently to ~620 µs at $W=31$. Conversely, the sorting-dependent $O(N \log N)$ Hampel filter spikes to ~3,400 µs. This 600% increase in active FPU/CPU cycles proportionally drains the battery.
+2. **End-to-End Delay (Latency):** Statistical filters require a full window of data before processing the central point. Expanding to $W=31$ physically delays the pipeline by **310 milliseconds**, introducing unacceptable RTOS latency for real-time applications.
+3. **Memory Usage:** Allocating 248 Bytes on the stack is safe for small windows, but expanding the window arbitrarily would quickly cause Stack Overflows and heap fragmentation on memory-constrained ESP32 nodes.
+
+**Filter Window Conclusion & The Over-Filtering Penalty**
+Empirical measurements prove that larger windows do *not* automatically improve statistical estimates. In fact, $W=5$ produced the highest Mean Error Reduction. Expanding the window to $W=31$ in low-contamination scenarios ($p=0.01$) resulted in severely negative MER values (e.g., -112%). An oversized median window artificially attenuates the natural high-frequency peaks of the sine wave, introducing mathematical errors greater than the baseline noise itself. $W=5$ represents the absolute optimum across memory, latency, energy, and signal integrity.
