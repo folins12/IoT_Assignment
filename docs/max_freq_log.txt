@@ -1,3 +1,3 @@
 Starting ADC Max Frequency Test...
-Time taken for 100000 samples: 6.111358 seconds
-MAXIMUM SAMPLING FREQUENCY: 16362.97 Hz
+Time taken for 100000 samples: 6.105622 seconds
+MAXIMUM SAMPLING FREQUENCY: 16378.35 Hz

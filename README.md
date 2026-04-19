@@ -1,26 +1,17 @@
-# IoT Individual Assignment
-**Hardware:** Heltec WiFi LoRa 32 V3 (ESP32-S3), INA219 Power Sensor  
-**Framework:** FreeRTOS (PlatformIO)
-
-This repository contains the firmware and evaluation for an IoT system that dynamically adapts its sampling frequency to save energy, performs local edge aggregation, and transmits data via WiFi (MQTT) and LoRaWAN (TTN). It also includes a DSP benchmarking environment to test anomaly detection filters (Z-Score and Hampel).
-
----
-
-## Hands-on Walkthrough: Setup & Run
+# Hands-on Walkthrough: Setup & Run
 
 ### 1. Repository Structure
-Before running the system, here is an overview of how the project is organized:
-* **`src/`** (Source Code)
-  * `main.cpp`: The primary IoT firmware (Adaptive sampling, FFT, MQTT, LoRa).
-  * `max_freq.cpp`: Standalone hardware benchmark script used to test the ESP32 ADC maximum capabilities.
+* **`src/`**
+  * `main.cpp`: It contains the adaptive sampling, FFT, MQTT and LoRa part.
+  * `max_freq.cpp`: Standalone script to test the ESP32 ADC maximum capabilities.
   * `bonus.cpp`: The DSP benchmarking tool for anomaly injection and filtering evaluation.
-* **`docs/`** (Documentation & Evidence)
-  * `README.md`: This main documentation file.
-  * `prompts.md`: Contains the series of LLM prompts used during the development phase.
-  * `max_freq_log.txt` & `bonus_log.txt`: Console output logs from the evaluation scripts.
-  * `plots/`: A directory containing Teleplot screenshots that visually demonstrate the adaptive sampling behavior and edge cases.
+* **`docs/`**
+  * `README.md`: The main documentation file describing all the project parts.
+  * `prompts.md`: Contains the list of LLM prompts used during the development.
+  * `max_freq_log.txt` & `bonus_log.txt`: Store the output logs respectively of `max_freq.cpp` and `bonus.cpp`.
+  * `plots/`: Folder containing Teleplot screenshots.
 
-### 2. Hardware Prerequisites
+### 2. Hardware
 * **Heltec WiFi LoRa 32 V3** (ESP32-S3)
 * **INA219 I2C Power Sensor**
 * **Wiring:**
@@ -29,26 +20,8 @@ Before running the system, here is an overview of how the project is organized:
   * INA219 `SDA` -> Heltec `Pin 41`
   * INA219 `SCL` -> Heltec `Pin 42`
 
-### 3. Software Prerequisites
-* **VSCode** with the **PlatformIO** extension installed.
-* **Teleplot** extension in VSCode (for visualizing the real-time adaptive sampling graphs).
-
-### 4. Configuration
-Before compiling, you must insert your credentials into the code:
+### 3. Configuration
+Before compiling you must insert your WiFi and TTN credentials into the code:
 1. Open `src/main.cpp`.
 2. Update the WiFi credentials: `ssid` and `password`.
-3. Update the LoRaWAN TTN Keys (`joinEUI`, `devEUI`, and `appKey`) using the MSB format provided by your The Things Network console. 
-   *(Note: For `RadioLib` v6.6.0 with LoRaWAN v1.0.3, the `appKey` is passed into both the nwkKey and appKey parameters during `beginOTAA`).*
-
-### 5. Running the System (PlatformIO Environments)
-This project uses distinct PlatformIO environments configured in `platformio.ini` to separate the networking IoT application from the DSP benchmarking tool.
-
-**To run the Main IoT System (Adaptive Sampling & Comms):**
-1. In the VSCode PlatformIO bottom status bar, select the environment: `env:main`.
-2. Click **Upload** (the right arrow icon) to flash `src/main.cpp`.
-3. Open the **Teleplot** extension, select your COM port, set baud rate to `115200`, and connect. You will see real-time graphs of the input signal, the adapting sampling frequency, and the computed average.
-
-**To run the Bonus DSP Benchmark (Anomaly Filtering):**
-1. In the VSCode PlatformIO bottom status bar, switch the environment to: `env:bonus`.
-2. Click **Upload** to flash `src/bonus.cpp`.
-3. Open the standard **Serial Monitor** (plug icon). The board will output performance matrices comparing Z-Score and Hampel filters at various injection probabilities. You can edit the `ANOMALY_PROB` and `FILTER_WINDOW` constants at the top of `src/bonus.cpp` to test different scenarios.
+3. Update the LoRaWAN TTN Keys (`joinEUI`, `devEUI`, and `appKey`) using the MSB format provided by your The Things Network console.

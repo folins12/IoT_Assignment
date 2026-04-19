@@ -1,45 +1,45 @@
 -------------------------------------------------------------------------- ANOMALY_PROB = 1%   FILTER_WINDOW = 5 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.01, WINDOW=5
+Testing at P=0.01, WINDOW=5
 [UNFILTERED] FFT Peak: 4.99 Hz
-[Z-SCORE] Exec: 992 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.99 Hz
-[HAMPEL]  Exec: 9922 us | TPR: 1.00 | FPR: 1 | FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 306 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 526 us | TPR: 1.00 | FPR: 2 | MER:  26.4% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=5
-[UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 990 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 9903 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 4.94 Hz
+[Z-SCORE] Exec: 302 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 514 us | TPR: 0.00 | FPR: 2 | MER:  -2.5% | FFT Peak: 4.94 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=5
-[UNFILTERED] FFT Peak: 4.97 Hz
-[Z-SCORE] Exec: 990 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.97 Hz
-[HAMPEL]  Exec: 9899 us | TPR: 1.00 | FPR: 0 | FFT Peak: 4.98 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=5
+Testing at P=0.01, WINDOW=5
 [UNFILTERED] FFT Peak: 4.99 Hz
-[Z-SCORE] Exec: 990 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.99 Hz
-[HAMPEL]  Exec: 9902 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 302 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 516 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=5
-[UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 990 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 9907 us | TPR: 0.00 | FPR: 2 | FFT Peak: 4.98 Hz
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 5.01 Hz
+[Z-SCORE] Exec: 301 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.01 Hz
+[HAMPEL]  Exec: 511 us | TPR: 1.00 | FPR: 1 | MER:  28.9% | FFT Peak: 4.98 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=5
+Testing at P=0.01, WINDOW=5
 [UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 990 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 9896 us | TPR: 0.00 | FPR: 2 | FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 300 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 516 us | TPR: 0.00 | FPR: 2 | MER:  -1.8% | FFT Peak: 4.98 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=5
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 5.03 Hz
+[Z-SCORE] Exec: 303 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.03 Hz
+[HAMPEL]  Exec: 518 us | TPR: 1.00 | FPR: 3 | MER:  48.7% | FFT Peak: 4.98 Hz
+
+========================================
+Testing at P=0.01, WINDOW=5
 [UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 989 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 9893 us | TPR: 1.00 | FPR: 1 | FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 302 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 514 us | TPR: 0.67 | FPR: 2 | MER:  35.8% | FFT Peak: 4.98 Hz
 
 
 
@@ -48,46 +48,46 @@ PROFILING AT P=0.01, WINDOW=5
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 1%   FILTER_WINDOW = 15 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.01, WINDOW=15
-[UNFILTERED] FFT Peak: 4.95 Hz
-[Z-SCORE] Exec: 2428 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.95 Hz
-[HAMPEL]  Exec: 14069 us | TPR: 0.50 | FPR: 1 | FFT Peak: 4.95 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=15
-[UNFILTERED] FFT Peak: 5.03 Hz
-[Z-SCORE] Exec: 2417 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.03 Hz
-[HAMPEL]  Exec: 14000 us | TPR: 1.00 | FPR: 1 | FFT Peak: 4.98 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=15
-[UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 2419 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 14077 us | TPR: 0.00 | FPR: 1 | FFT Peak: 4.98 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=15
+Testing at P=0.01, WINDOW=15
 [UNFILTERED] FFT Peak: 4.99 Hz
-[Z-SCORE] Exec: 2420 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.99 Hz
-[HAMPEL]  Exec: 14091 us | TPR: 0.00 | FPR: 1 | FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 423 us | TPR: 1.00 | FPR: 0 | MER:  29.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 2054 us | TPR: 1.00 | FPR: 1 | MER:  16.7% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=15
+Testing at P=0.01, WINDOW=15
 [UNFILTERED] FFT Peak: 4.97 Hz
-[Z-SCORE] Exec: 2418 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.97 Hz
-[HAMPEL]  Exec: 14057 us | TPR: 0.50 | FPR: 1 | FFT Peak: 4.96 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 2053 us | TPR: 0.00 | FPR: 2 | MER: -40.0% | FFT Peak: 4.97 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=15
-[UNFILTERED] FFT Peak: 5.04 Hz
-[Z-SCORE] Exec: 2420 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.04 Hz
-[HAMPEL]  Exec: 13983 us | TPR: 0.50 | FPR: 1 | FFT Peak: 5.02 Hz
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 4.97 Hz
+[Z-SCORE] Exec: 425 us | TPR: 1.00 | FPR: 0 | MER:  44.4% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 2058 us | TPR: 1.00 | FPR: 1 | MER:  35.1% | FFT Peak: 4.97 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=15
+Testing at P=0.01, WINDOW=15
 [UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 2419 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 14075 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 425 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 2104 us | TPR: 0.00 | FPR: 1 | MER: -22.3% | FFT Peak: 4.98 Hz
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 5.02 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.02 Hz
+[HAMPEL]  Exec: 2122 us | TPR: 0.00 | FPR: 2 | MER: -29.6% | FFT Peak: 5.01 Hz
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 427 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 2031 us | TPR: 0.50 | FPR: 2 | MER:  -7.9% | FFT Peak: 4.95 Hz
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 5.04 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.04 Hz
+[HAMPEL]  Exec: 2086 us | TPR: 1.00 | FPR: 1 | MER:  15.5% | FFT Peak: 4.99 Hz
 
 
 
@@ -95,47 +95,46 @@ PROFILING AT P=0.01, WINDOW=15
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 1%   FILTER_WINDOW = 31 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.01, WINDOW=31
-[UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 4596 us | TPR: 1.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 18864 us | TPR: 1.00 | FPR: 0 | FFT Peak: 4.98 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=31
-[UNFILTERED] FFT Peak: 5.01 Hz
-[Z-SCORE] Exec: 4596 us | TPR: 0.50 | FPR: 0 | FFT Peak: 4.99 Hz
-[HAMPEL]  Exec: 18833 us | TPR: 0.50 | FPR: 0 | FFT Peak: 4.98 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=31
-[UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 4587 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 18838 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=31
-[UNFILTERED] FFT Peak: 4.94 Hz
-[Z-SCORE] Exec: 4593 us | TPR: 0.50 | FPR: 0 | FFT Peak: 5.00 Hz
-[HAMPEL]  Exec: 18840 us | TPR: 0.50 | FPR: 0 | FFT Peak: 5.01 Hz
-
-========================================
-PROFILING AT P=0.01, WINDOW=31
+Testing at P=0.01, WINDOW=31
 [UNFILTERED] FFT Peak: 4.99 Hz
-[Z-SCORE] Exec: 4587 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.99 Hz
-[HAMPEL]  Exec: 18866 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 605 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 3544 us | TPR: 0.00 | FPR: 1 | MER: -36.4% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=31
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 5.02 Hz
+[Z-SCORE] Exec: 607 us | TPR: 0.50 | FPR: 0 | MER:  24.6% | FFT Peak: 5.03 Hz
+[HAMPEL]  Exec: 3440 us | TPR: 1.00 | FPR: 5 | MER: -31.1% | FFT Peak: 4.99 Hz
+
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 4.90 Hz
+[Z-SCORE] Exec: 607 us | TPR: 0.50 | FPR: 0 | MER:  24.9% | FFT Peak: 4.96 Hz
+[HAMPEL]  Exec: 3492 us | TPR: 1.00 | FPR: 4 | MER: -19.5% | FFT Peak: 4.98 Hz
+
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 4.94 Hz
+[Z-SCORE] Exec: 607 us | TPR: 0.50 | FPR: 0 | MER:  26.8% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 3473 us | TPR: 0.50 | FPR: 2 | MER: -14.8% | FFT Peak: 4.96 Hz
+
+========================================
+Testing at P=0.01, WINDOW=31
 [UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 4592 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 18847 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 3457 us | TPR: 1.00 | FPR: 10 | MER: -232.5% | FFT Peak: 5.02 Hz
 
 ========================================
-PROFILING AT P=0.01, WINDOW=31
-[UNFILTERED] FFT Peak: 5.05 Hz
-[Z-SCORE] Exec: 4593 us | TPR: 0.50 | FPR: 0 | FFT Peak: 5.00 Hz
-[HAMPEL]  Exec: 18862 us | TPR: 0.50 | FPR: 0 | FFT Peak: 5.00 Hz
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 3473 us | TPR: 1.00 | FPR: 6 | MER: -169.4% | FFT Peak: 4.97 Hz
 
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 3496 us | TPR: 0.00 | FPR: 4 | MER: -118.3% | FFT Peak: 4.96 Hz
 
 
 
@@ -143,46 +142,46 @@ PROFILING AT P=0.01, WINDOW=31
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 5%   FILTER_WINDOW = 5 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 5.07 Hz
-[Z-SCORE] Exec: 2429 us | TPR: 0.25 | FPR: 0 | FFT Peak: 5.08 Hz
-[HAMPEL]  Exec: 14063 us | TPR: 0.75 | FPR: 1 | FFT Peak: 5.00 Hz
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 306 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 522 us | TPR: 0.86 | FPR: 1 | MER:  67.3% | FFT Peak: 4.96 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 4.95 Hz
-[Z-SCORE] Exec: 2426 us | TPR: 0.25 | FPR: 0 | FFT Peak: 4.99 Hz
-[HAMPEL]  Exec: 14052 us | TPR: 0.25 | FPR: 1 | FFT Peak: 4.99 Hz
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 4.92 Hz
+[Z-SCORE] Exec: 302 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.92 Hz
+[HAMPEL]  Exec: 496 us | TPR: 0.62 | FPR: 1 | MER:  56.1% | FFT Peak: 4.97 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 5.18 Hz
-[Z-SCORE] Exec: 2427 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.18 Hz
-[HAMPEL]  Exec: 13956 us | TPR: 0.50 | FPR: 1 | FFT Peak: 5.12 Hz
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 5.05 Hz
+[Z-SCORE] Exec: 310 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.05 Hz
+[HAMPEL]  Exec: 513 us | TPR: 0.71 | FPR: 3 | MER:  50.2% | FFT Peak: 5.00 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 5.07 Hz
-[Z-SCORE] Exec: 2420 us | TPR: 0.25 | FPR: 0 | FFT Peak: 5.05 Hz
-[HAMPEL]  Exec: 14055 us | TPR: 0.25 | FPR: 1 | FFT Peak: 5.05 Hz
-
-========================================
-PROFILING AT P=0.05, WINDOW=15
+Testing at P=0.05, WINDOW=5
 [UNFILTERED] FFT Peak: 4.96 Hz
-[Z-SCORE] Exec: 2418 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.96 Hz
-[HAMPEL]  Exec: 14037 us | TPR: 0.25 | FPR: 1 | FFT Peak: 4.97 Hz
+[Z-SCORE] Exec: 300 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.96 Hz
+[HAMPEL]  Exec: 505 us | TPR: 0.90 | FPR: 2 | MER:  71.9% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 5.00 Hz
-[Z-SCORE] Exec: 2425 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.00 Hz
-[HAMPEL]  Exec: 13974 us | TPR: 0.50 | FPR: 1 | FFT Peak: 4.96 Hz
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 4.92 Hz
+[Z-SCORE] Exec: 301 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.92 Hz
+[HAMPEL]  Exec: 507 us | TPR: 0.83 | FPR: 0 | MER:  59.6% | FFT Peak: 4.97 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 4.88 Hz
+[Z-SCORE] Exec: 300 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.88 Hz
+[HAMPEL]  Exec: 502 us | TPR: 0.57 | FPR: 1 | MER:  50.3% | FFT Peak: 4.97 Hz
+
+========================================
+Testing at P=0.05, WINDOW=5
 [UNFILTERED] FFT Peak: 4.90 Hz
-[Z-SCORE] Exec: 2419 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.90 Hz
-[HAMPEL]  Exec: 13981 us | TPR: 0.25 | FPR: 1 | FFT Peak: 4.94 Hz
+[Z-SCORE] Exec: 300 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.90 Hz
+[HAMPEL]  Exec: 510 us | TPR: 0.88 | FPR: 1 | MER:  68.8% | FFT Peak: 4.97 Hz
 
 
 
@@ -190,48 +189,47 @@ PROFILING AT P=0.05, WINDOW=15
 
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 5%   FILTER_WINDOW = 15 --------------------------------------------------------------------------
-
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 5.01 Hz
-[Z-SCORE] Exec: 2420 us | TPR: 0.50 | FPR: 0 | FFT Peak: 5.03 Hz
-[HAMPEL]  Exec: 14062 us | TPR: 0.67 | FPR: 1 | FFT Peak: 4.99 Hz
-
-========================================
-PROFILING AT P=0.05, WINDOW=15
+Testing at P=0.05, WINDOW=15
 [UNFILTERED] FFT Peak: 5.02 Hz
-[Z-SCORE] Exec: 2425 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.02 Hz
-[HAMPEL]  Exec: 13892 us | TPR: 0.43 | FPR: 0 | FFT Peak: 5.03 Hz
+[Z-SCORE] Exec: 423 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.02 Hz
+[HAMPEL]  Exec: 1994 us | TPR: 0.83 | FPR: 1 | MER:  50.2% | FFT Peak: 5.02 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 4.85 Hz
-[Z-SCORE] Exec: 2426 us | TPR: 0.20 | FPR: 0 | FFT Peak: 4.85 Hz
-[HAMPEL]  Exec: 13962 us | TPR: 0.50 | FPR: 1 | FFT Peak: 4.92 Hz
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 427 us | TPR: 0.12 | FPR: 0 | MER:  10.7% | FFT Peak: 5.01 Hz
+[HAMPEL]  Exec: 1951 us | TPR: 0.38 | FPR: 2 | MER:  21.9% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 4.96 Hz
-[Z-SCORE] Exec: 2418 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.96 Hz
-[HAMPEL]  Exec: 14033 us | TPR: 0.33 | FPR: 1 | FFT Peak: 4.94 Hz
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 5.10 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.08 | FPR: 0 | MER:   9.3% | FFT Peak: 5.09 Hz
+[HAMPEL]  Exec: 1966 us | TPR: 0.69 | FPR: 1 | MER:  49.1% | FFT Peak: 4.92 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 4.96 Hz
-[Z-SCORE] Exec: 2427 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.96 Hz
-[HAMPEL]  Exec: 13934 us | TPR: 0.33 | FPR: 1 | FFT Peak: 4.94 Hz
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 425 us | TPR: 0.50 | FPR: 0 | MER:  26.6% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 2053 us | TPR: 1.00 | FPR: 0 | MER:  42.5% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 4.85 Hz
-[Z-SCORE] Exec: 2427 us | TPR: 0.14 | FPR: 0 | FFT Peak: 4.86 Hz
-[HAMPEL]  Exec: 13911 us | TPR: 0.43 | FPR: 1 | FFT Peak: 4.88 Hz
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 5.05 Hz
+[Z-SCORE] Exec: 425 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.05 Hz
+[HAMPEL]  Exec: 1985 us | TPR: 0.30 | FPR: 0 | MER:  22.7% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=15
-[UNFILTERED] FFT Peak: 4.98 Hz
-[Z-SCORE] Exec: 2426 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.98 Hz
-[HAMPEL]  Exec: 13953 us | TPR: 0.12 | FPR: 1 | FFT Peak: 5.00 Hz
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 5.00 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.33 | FPR: 0 | MER:  21.3% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 2060 us | TPR: 1.00 | FPR: 2 | MER:  45.7% | FFT Peak: 4.97 Hz
+
+========================================
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 5.01 Hz
+[Z-SCORE] Exec: 425 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.01 Hz
+[HAMPEL]  Exec: 1987 us | TPR: 0.33 | FPR: 1 | MER:  14.3% | FFT Peak: 5.03 Hz
 
 
 
@@ -239,46 +237,46 @@ PROFILING AT P=0.05, WINDOW=15
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 5%   FILTER_WINDOW = 31 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.05, WINDOW=31
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 603 us | TPR: 0.20 | FPR: 0 | MER:  10.6% | FFT Peak: 5.00 Hz
+[HAMPEL]  Exec: 3468 us | TPR: 0.60 | FPR: 7 | MER: -46.7% | FFT Peak: 5.03 Hz
+
+========================================
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 5.06 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.22 | FPR: 0 | MER:  16.0% | FFT Peak: 5.02 Hz
+[HAMPEL]  Exec: 3389 us | TPR: 0.44 | FPR: 3 | MER:   2.7% | FFT Peak: 5.05 Hz
+
+========================================
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 4.81 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.17 | FPR: 0 | MER:   7.3% | FFT Peak: 4.80 Hz
+[HAMPEL]  Exec: 3482 us | TPR: 0.83 | FPR: 2 | MER:  33.2% | FFT Peak: 4.93 Hz
+
+========================================
+Testing at P=0.05, WINDOW=31
 [UNFILTERED] FFT Peak: 4.97 Hz
-[Z-SCORE] Exec: 4596 us | TPR: 0.25 | FPR: 0 | FFT Peak: 4.94 Hz
-[HAMPEL]  Exec: 18877 us | TPR: 0.50 | FPR: 0 | FFT Peak: 4.91 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 3474 us | TPR: 0.25 | FPR: 6 | MER: -77.6% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=31
-[UNFILTERED] FFT Peak: 4.96 Hz
-[Z-SCORE] Exec: 4593 us | TPR: 0.40 | FPR: 0 | FFT Peak: 5.00 Hz
-[HAMPEL]  Exec: 18832 us | TPR: 0.40 | FPR: 0 | FFT Peak: 5.00 Hz
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 4.97 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.10 | FPR: 0 | MER:   6.3% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 3351 us | TPR: 0.50 | FPR: 2 | MER:  23.8% | FFT Peak: 4.92 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=31
-[UNFILTERED] FFT Peak: 4.88 Hz
-[Z-SCORE] Exec: 4590 us | TPR: 0.50 | FPR: 0 | FFT Peak: 4.96 Hz
-[HAMPEL]  Exec: 18832 us | TPR: 0.50 | FPR: 0 | FFT Peak: 4.97 Hz
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 4.95 Hz
+[Z-SCORE] Exec: 605 us | TPR: 1.00 | FPR: 0 | MER:  48.4% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 3458 us | TPR: 1.00 | FPR: 5 | MER: -13.6% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.05, WINDOW=31
-[UNFILTERED] FFT Peak: 5.03 Hz
-[Z-SCORE] Exec: 4593 us | TPR: 0.22 | FPR: 0 | FFT Peak: 5.02 Hz
-[HAMPEL]  Exec: 18751 us | TPR: 0.44 | FPR: 0 | FFT Peak: 5.01 Hz
-
-========================================
-PROFILING AT P=0.05, WINDOW=31
-[UNFILTERED] FFT Peak: 4.90 Hz
-[Z-SCORE] Exec: 4592 us | TPR: 0.18 | FPR: 0 | FFT Peak: 4.93 Hz
-[HAMPEL]  Exec: 18791 us | TPR: 0.18 | FPR: 0 | FFT Peak: 4.93 Hz
-
-========================================
-PROFILING AT P=0.05, WINDOW=31
-[UNFILTERED] FFT Peak: 5.16 Hz
-[Z-SCORE] Exec: 4595 us | TPR: 0.40 | FPR: 0 | FFT Peak: 5.01 Hz
-[HAMPEL]  Exec: 18798 us | TPR: 0.20 | FPR: 0 | FFT Peak: 5.10 Hz
-
-========================================
-PROFILING AT P=0.05, WINDOW=31
-[UNFILTERED] FFT Peak: 4.96 Hz
-[Z-SCORE] Exec: 4593 us | TPR: 0.40 | FPR: 0 | FFT Peak: 4.96 Hz
-[HAMPEL]  Exec: 18831 us | TPR: 0.60 | FPR: 0 | FFT Peak: 5.01 Hz
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 4.94 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 3447 us | TPR: 0.50 | FPR: 2 | MER:  -3.4% | FFT Peak: 5.00 Hz
 
 
 
@@ -287,46 +285,46 @@ PROFILING AT P=0.05, WINDOW=31
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 10%   FILTER_WINDOW = 5 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.10, WINDOW=5
-[UNFILTERED] FFT Peak: 4.92 Hz
-[Z-SCORE] Exec: 992 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.92 Hz
-[HAMPEL]  Exec: 9916 us | TPR: 0.25 | FPR: 2 | FFT Peak: 4.98 Hz
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 5.15 Hz
+[Z-SCORE] Exec: 306 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.15 Hz
+[HAMPEL]  Exec: 512 us | TPR: 0.65 | FPR: 0 | MER:  60.5% | FFT Peak: 5.13 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=5
-[UNFILTERED] FFT Peak: 4.88 Hz
-[Z-SCORE] Exec: 988 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.88 Hz
-[HAMPEL]  Exec: 9885 us | TPR: 0.76 | FPR: 0 | FFT Peak: 4.94 Hz
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 5.16 Hz
+[Z-SCORE] Exec: 310 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.16 Hz
+[HAMPEL]  Exec: 500 us | TPR: 0.79 | FPR: 0 | MER:  68.4% | FFT Peak: 5.04 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=5
-[UNFILTERED] FFT Peak: 4.95 Hz
-[Z-SCORE] Exec: 990 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.95 Hz
-[HAMPEL]  Exec: 9897 us | TPR: 0.86 | FPR: 1 | FFT Peak: 4.93 Hz
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 5.14 Hz
+[Z-SCORE] Exec: 309 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.14 Hz
+[HAMPEL]  Exec: 499 us | TPR: 0.50 | FPR: 2 | MER:  39.4% | FFT Peak: 5.04 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=5
-[UNFILTERED] FFT Peak: 4.95 Hz
-[Z-SCORE] Exec: 989 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.95 Hz
-[HAMPEL]  Exec: 9874 us | TPR: 0.73 | FPR: 1 | FFT Peak: 5.00 Hz
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 5.03 Hz
+[Z-SCORE] Exec: 308 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.03 Hz
+[HAMPEL]  Exec: 500 us | TPR: 0.69 | FPR: 1 | MER:  56.2% | FFT Peak: 5.05 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=5
-[UNFILTERED] FFT Peak: 5.02 Hz
-[Z-SCORE] Exec: 982 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.02 Hz
-[HAMPEL]  Exec: 9898 us | TPR: 0.79 | FPR: 0 | FFT Peak: 5.08 Hz
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 5.00 Hz
+[Z-SCORE] Exec: 310 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.00 Hz
+[HAMPEL]  Exec: 492 us | TPR: 0.67 | FPR: 5 | MER:  58.6% | FFT Peak: 4.98 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=5
-[UNFILTERED] FFT Peak: 4.96 Hz
-[Z-SCORE] Exec: 989 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.96 Hz
-[HAMPEL]  Exec: 9888 us | TPR: 0.61 | FPR: 1 | FFT Peak: 4.93 Hz
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 308 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 491 us | TPR: 0.73 | FPR: 0 | MER:  59.5% | FFT Peak: 4.97 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=5
-[UNFILTERED] FFT Peak: 4.95 Hz
-[Z-SCORE] Exec: 988 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.95 Hz
-[HAMPEL]  Exec: 9897 us | TPR: 0.69 | FPR: 1 | FFT Peak: 4.99 Hz
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 4.97 Hz
+[Z-SCORE] Exec: 300 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 509 us | TPR: 0.85 | FPR: 4 | MER:  73.1% | FFT Peak: 4.98 Hz
 
 
 
@@ -335,46 +333,46 @@ PROFILING AT P=0.10, WINDOW=5
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 10%   FILTER_WINDOW = 15 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.10, WINDOW=15
-[UNFILTERED] FFT Peak: 5.03 Hz
-[Z-SCORE] Exec: 2420 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.03 Hz
-[HAMPEL]  Exec: 14026 us | TPR: 0.57 | FPR: 0 | FFT Peak: 4.98 Hz
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.10 Hz
+[Z-SCORE] Exec: 423 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.10 Hz
+[HAMPEL]  Exec: 1942 us | TPR: 0.69 | FPR: 1 | MER:  55.9% | FFT Peak: 4.97 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=15
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 4.86 Hz
+[Z-SCORE] Exec: 428 us | TPR: 0.09 | FPR: 0 | MER:   9.3% | FFT Peak: 4.89 Hz
+[HAMPEL]  Exec: 1981 us | TPR: 0.64 | FPR: 1 | MER:  49.5% | FFT Peak: 4.95 Hz
+
+========================================
+Testing at P=0.10, WINDOW=15
 [UNFILTERED] FFT Peak: 4.92 Hz
-[Z-SCORE] Exec: 2427 us | TPR: 0.09 | FPR: 0 | FFT Peak: 4.92 Hz
-[HAMPEL]  Exec: 14002 us | TPR: 0.36 | FPR: 1 | FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.15 | FPR: 0 | MER:  15.5% | FFT Peak: 4.91 Hz
+[HAMPEL]  Exec: 1842 us | TPR: 0.85 | FPR: 1 | MER:  68.3% | FFT Peak: 4.96 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=15
-[UNFILTERED] FFT Peak: 5.05 Hz
-[Z-SCORE] Exec: 2425 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.05 Hz
-[HAMPEL]  Exec: 14018 us | TPR: 0.33 | FPR: 1 | FFT Peak: 5.10 Hz
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 1960 us | TPR: 0.45 | FPR: 1 | MER:  37.1% | FFT Peak: 5.01 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=15
-[UNFILTERED] FFT Peak: 5.12 Hz
-[Z-SCORE] Exec: 2425 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.12 Hz
-[HAMPEL]  Exec: 13964 us | TPR: 0.25 | FPR: 0 | FFT Peak: 5.11 Hz
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.08 Hz
+[Z-SCORE] Exec: 426 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 5.08 Hz
+[HAMPEL]  Exec: 2098 us | TPR: 0.70 | FPR: 1 | MER:  48.1% | FFT Peak: 4.99 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=15
+Testing at P=0.10, WINDOW=15
 [UNFILTERED] FFT Peak: 4.92 Hz
-[Z-SCORE] Exec: 2420 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.92 Hz
-[HAMPEL]  Exec: 13832 us | TPR: 0.13 | FPR: 0 | FFT Peak: 4.96 Hz
+[Z-SCORE] Exec: 427 us | TPR: 0.07 | FPR: 0 | MER:   6.6% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 1995 us | TPR: 0.67 | FPR: 1 | MER:  47.4% | FFT Peak: 4.90 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=15
-[UNFILTERED] FFT Peak: 5.04 Hz
-[Z-SCORE] Exec: 2425 us | TPR: 0.08 | FPR: 0 | FFT Peak: 5.02 Hz
-[HAMPEL]  Exec: 13890 us | TPR: 0.50 | FPR: 1 | FFT Peak: 4.98 Hz
-
-========================================
-PROFILING AT P=0.10, WINDOW=15
-[UNFILTERED] FFT Peak: 5.09 Hz
-[Z-SCORE] Exec: 2424 us | TPR: 0.00 | FPR: 0 | FFT Peak: 5.09 Hz
-[HAMPEL]  Exec: 13942 us | TPR: 0.50 | FPR: 0 | FFT Peak: 4.99 Hz
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.07 Hz
+[Z-SCORE] Exec: 427 us | TPR: 0.20 | FPR: 0 | MER:  17.6% | FFT Peak: 5.03 Hz
+[HAMPEL]  Exec: 2008 us | TPR: 0.80 | FPR: 1 | MER:  45.9% | FFT Peak: 5.02 Hz
 
 
 
@@ -382,43 +380,43 @@ PROFILING AT P=0.10, WINDOW=15
 
 -------------------------------------------------------------------------- ANOMALY_PROB = 10%   FILTER_WINDOW = 31 --------------------------------------------------------------------------
 ========================================
-PROFILING AT P=0.10, WINDOW=31
-[UNFILTERED] FFT Peak: 4.90 Hz
-[Z-SCORE] Exec: 4590 us | TPR: 0.18 | FPR: 0 | FFT Peak: 4.90 Hz
-[HAMPEL]  Exec: 18835 us | TPR: 0.36 | FPR: 0 | FFT Peak: 4.92 Hz
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 4.91 Hz
+[Z-SCORE] Exec: 603 us | TPR: 0.12 | FPR: 0 | MER:  10.1% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 3390 us | TPR: 0.76 | FPR: 0 | MER:  50.8% | FFT Peak: 4.91 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=31
-[UNFILTERED] FFT Peak: 5.03 Hz
-[Z-SCORE] Exec: 4590 us | TPR: 0.25 | FPR: 0 | FFT Peak: 5.03 Hz
-[HAMPEL]  Exec: 18763 us | TPR: 0.17 | FPR: 0 | FFT Peak: 5.05 Hz
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 5.01 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.23 | FPR: 0 | MER:  21.3% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 3325 us | TPR: 0.62 | FPR: 2 | MER:  34.3% | FFT Peak: 4.88 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=31
+Testing at P=0.10, WINDOW=31
 [UNFILTERED] FFT Peak: 4.97 Hz
-[Z-SCORE] Exec: 4592 us | TPR: 0.00 | FPR: 0 | FFT Peak: 4.97 Hz
-[HAMPEL]  Exec: 18876 us | TPR: 0.40 | FPR: 0 | FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.18 | FPR: 0 | MER:   9.6% | FFT Peak: 4.92 Hz
+[HAMPEL]  Exec: 3358 us | TPR: 0.55 | FPR: 1 | MER:  32.9% | FFT Peak: 4.94 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=31
-[UNFILTERED] FFT Peak: 4.99 Hz
-[Z-SCORE] Exec: 4585 us | TPR: 0.24 | FPR: 0 | FFT Peak: 4.95 Hz
-[HAMPEL]  Exec: 18739 us | TPR: 0.29 | FPR: 0 | FFT Peak: 5.00 Hz
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 4.95 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.14 | FPR: 0 | MER:  12.0% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 3444 us | TPR: 0.86 | FPR: 5 | MER:  16.8% | FFT Peak: 4.97 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=31
-[UNFILTERED] FFT Peak: 3.07 Hz
-[Z-SCORE] Exec: 4594 us | TPR: 0.08 | FPR: 0 | FFT Peak: 3.04 Hz
-[HAMPEL]  Exec: 18786 us | TPR: 0.33 | FPR: 0 | FFT Peak: 3.11 Hz
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 5.22 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.18 | FPR: 0 | MER:   9.0% | FFT Peak: 5.22 Hz
+[HAMPEL]  Exec: 3324 us | TPR: 0.82 | FPR: 2 | MER:  48.0% | FFT Peak: 4.91 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=31
-[UNFILTERED] FFT Peak: 5.04 Hz
-[Z-SCORE] Exec: 4591 us | TPR: 0.20 | FPR: 0 | FFT Peak: 4.99 Hz
-[HAMPEL]  Exec: 18791 us | TPR: 0.40 | FPR: 0 | FFT Peak: 5.03 Hz
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 4.85 Hz
+[Z-SCORE] Exec: 606 us | TPR: 0.29 | FPR: 0 | MER:  23.4% | FFT Peak: 4.84 Hz
+[HAMPEL]  Exec: 3368 us | TPR: 0.64 | FPR: 1 | MER:  30.4% | FFT Peak: 4.87 Hz
 
 ========================================
-PROFILING AT P=0.10, WINDOW=31
+Testing at P=0.10, WINDOW=31
 [UNFILTERED] FFT Peak: 4.92 Hz
-[Z-SCORE] Exec: 4594 us | TPR: 0.27 | FPR: 0 | FFT Peak: 4.92 Hz
-[HAMPEL]  Exec: 18808 us | TPR: 0.55 | FPR: 0 | FFT Peak: 4.95 Hz
+[Z-SCORE] Exec: 605 us | TPR: 0.00 | FPR: 0 | MER:   0.0% | FFT Peak: 4.92 Hz
+[HAMPEL]  Exec: 3380 us | TPR: 0.75 | FPR: 3 | MER:  26.9% | FFT Peak: 4.90 Hz
