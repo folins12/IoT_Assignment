@@ -57,7 +57,6 @@ void TaskSensor(void *pvParameters) {
     float t = millis() / 1000.0;
     float signal = 3.0 * sin(2 * PI * 4 * t) + 1.5 * sin(2 * PI * 8 * t);
     
-    // VISIBLE TELEPLOT METRICS
     Serial.printf(">Signal:%.2f\n", signal);
     Serial.printf(">SamplingFreq:%d\n", current_sampling_hz);
 
@@ -80,7 +79,7 @@ void TaskSensor(void *pvParameters) {
     // 5-Second Aggregation Window
     if (millis() - window_start_time >= 5000) {
       current_average = window_sum / window_count;
-      Serial.printf(">Average:%.2f\n", current_average); // VISIBLE TELEPLOT METRIC
+      Serial.printf(">Average:%.2f\n", current_average);
       
       xQueueSend(avgQueue, (void *)&current_average, 0);
 
@@ -96,9 +95,8 @@ void TaskSensor(void *pvParameters) {
 
 void TaskProcessFFT(void *pvParameters) {
   for(;;) {
-    vTaskDelay(pdMS_TO_TICKS(10000)); 
+    vTaskDelay(pdMS_TO_TICKS(20000)); 
     
-    // Request fresh data to prevent in-place array corruption
     fft_index = 0;
     collect_fft_data = true;
     while(fft_index < samples) {
@@ -106,14 +104,35 @@ void TaskProcessFFT(void *pvParameters) {
     }
     collect_fft_data = false;
 
-    // Run FFT silently
     FFT.windowing(FFT_WIN_TYP_HAMMING, FFT_FORWARD);
     FFT.compute(FFT_FORWARD);
     FFT.complexToMagnitude();
-    double peak_freq = FFT.majorPeak();
 
-    if (peak_freq > 0 && peak_freq < 50) {
-      int new_freq = (int)(peak_freq * 2.0); // Nyquist-Shannon
+    // Maximum amplitude to establish a dynamic noise threshold
+    double max_magnitude = 0.0;
+    for (uint16_t i = 2; i < (samples / 2); i++) {
+      if (vReal[i] > max_magnitude) {
+        max_magnitude = vReal[i];
+      }
+    }
+    double threshold = max_magnitude * 0.15; 
+
+    // Maximum frequency that exceeds the threshold
+    double max_freq = 0.0;
+    for (uint16_t i = 2; i < (samples / 2); i++) {
+      if (vReal[i] > threshold) {
+        max_freq = (i * 1.0 * current_sampling_hz) / samples; 
+      }
+    }
+
+    // Nyquist
+    if (max_freq > 0 && max_freq < 50) {
+      int base_freq = (int)(max_freq * 2.0) + 1;
+      // Find the closest divisor of 1000 (greater than or equal to base_freq)
+      int new_freq = base_freq;
+      while (1000 % new_freq != 0) {
+        new_freq++;
+      }
       
       current_sampling_hz = new_freq;
       FFT = ArduinoFFT<double>(vReal, vImag, samples, (double)current_sampling_hz);
@@ -129,7 +148,7 @@ void TaskMQTT(void *pvParameters) {
         if (!mqtt.connected()) mqtt.connect("Heltec_ESP32_IoT");
         char payload[10];
         dtostrf(received_avg, 1, 2, payload);
-        mqtt.publish("student/heltec/avg", payload); // Transmit silently
+        mqtt.publish("student/heltec/avg", payload);
       }
     }
   }
@@ -145,7 +164,7 @@ void TaskLoRa(void *pvParameters) {
     if(node.isActivated()) {
       uint8_t payload[4];
       memcpy(payload, (uint8_t*)&current_average, 4);
-      node.sendReceive(payload, 4); // Transmit silently
+      node.sendReceive(payload, 4);
     }
   }
 }

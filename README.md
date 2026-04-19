@@ -8,7 +8,19 @@ This repository contains the firmware and evaluation for an IoT system that dyna
 
 ## Hands-on Walkthrough: Setup & Run
 
-### 1. Hardware Prerequisites
+### 1. Repository Structure
+Before running the system, here is an overview of how the project is organized:
+* **`src/`** (Source Code)
+  * `main.cpp`: The primary IoT firmware (Adaptive sampling, FFT, MQTT, LoRa).
+  * `max_freq.cpp`: Standalone hardware benchmark script used to test the ESP32 ADC maximum capabilities.
+  * `bonus.cpp`: The DSP benchmarking tool for anomaly injection and filtering evaluation.
+* **`docs/`** (Documentation & Evidence)
+  * `README.md`: This main documentation file.
+  * `prompts.md`: Contains the series of LLM prompts used during the development phase.
+  * `max_freq_log.txt` & `bonus_log.txt`: Console output logs from the evaluation scripts.
+  * `plots/`: A directory containing Teleplot screenshots that visually demonstrate the adaptive sampling behavior and edge cases.
+
+### 2. Hardware Prerequisites
 * **Heltec WiFi LoRa 32 V3** (ESP32-S3)
 * **INA219 I2C Power Sensor**
 * **Wiring:**
@@ -17,19 +29,19 @@ This repository contains the firmware and evaluation for an IoT system that dyna
   * INA219 `SDA` -> Heltec `Pin 41`
   * INA219 `SCL` -> Heltec `Pin 42`
 
-### 2. Software Prerequisites
+### 3. Software Prerequisites
 * **VSCode** with the **PlatformIO** extension installed.
 * **Teleplot** extension in VSCode (for visualizing the real-time adaptive sampling graphs).
 
-### 3. Configuration
+### 4. Configuration
 Before compiling, you must insert your credentials into the code:
 1. Open `src/main.cpp`.
 2. Update the WiFi credentials: `ssid` and `password`.
 3. Update the LoRaWAN TTN Keys (`joinEUI`, `devEUI`, and `appKey`) using the MSB format provided by your The Things Network console. 
    *(Note: For `RadioLib` v6.6.0 with LoRaWAN v1.0.3, the `appKey` is passed into both the nwkKey and appKey parameters during `beginOTAA`).*
 
-### 4. Running the System (PlatformIO Environments)
-This project uses two distinct PlatformIO environments configured in `platformio.ini` to separate the networking IoT application from the DSP benchmarking tool.
+### 5. Running the System (PlatformIO Environments)
+This project uses distinct PlatformIO environments configured in `platformio.ini` to separate the networking IoT application from the DSP benchmarking tool.
 
 **To run the Main IoT System (Adaptive Sampling & Comms):**
 1. In the VSCode PlatformIO bottom status bar, select the environment: `env:main`.
