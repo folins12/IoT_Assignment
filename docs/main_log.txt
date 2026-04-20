@@ -1,0 +1,166 @@
+[WIFI] Connessione......
+[WIFI] Connesso!
+
+[LORA] Avvio Radio...
+[LORA] Tentativo JOIN...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] JOIN FALLITO (-1116). Riprovo tra 10s...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Tentativo JOIN...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] JOIN FALLITO (-1116). Riprovo tra 10s...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Tentativo JOIN...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] JOIN FALLITO (-1116). Riprovo tra 10s...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Tentativo JOIN...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] JOIN FALLITO (-1116). Riprovo tra 10s...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Tentativo JOIN...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] JOIN FALLITO (-1118). Riprovo tra 10s...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Invio dato a TTN...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Pacchetto INVIATO con successo a TTN!
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Invio dato a TTN...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Pacchetto INVIATO con successo a TTN!
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Invio dato a TTN...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Pacchetto INVIATO con successo a TTN!
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Invio dato a TTN...
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+[LORA] Pacchetto INVIATO con successo a TTN!
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:-0.00
+[MQTT] Pubblicato: -0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Invio dato a TTN...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Pacchetto INVIATO con successo a TTN!
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Invio dato a TTN...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Pacchetto INVIATO con successo a TTN!
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Invio dato a TTN...
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+>Average:0.00
+[MQTT] Pubblicato: 0.00
+[LORA] Pacchetto INVIATO con successo a TTN!
+>Average:0.00
+[MQTT] Pubblicato: 0.00
