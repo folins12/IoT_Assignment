@@ -110,7 +110,7 @@ void TaskProcessFFT(void *pvParameters) {
     if (max_freq > 0 && max_freq < 50) {
       int base_freq = (int)(max_freq * 2.0) + 1;
       int new_freq = base_freq;
-      while (1000 % new_freq != 0) new_freq++;
+      //while (1000 % new_freq != 0) new_freq++;
       current_sampling_hz = new_freq;
       FFT = ArduinoFFT<double>(vReal, vImag, samples, (double)current_sampling_hz);
     }
