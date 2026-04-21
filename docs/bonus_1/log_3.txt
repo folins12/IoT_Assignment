@@ -1,0 +1,350 @@
+==================================================
+=== IoT System Booting ===
+==================================================
+[WIFI] Connecting.......
+[WIFI] Connected.
+
+[LORA] Booting Radio in background...
+
+[MAX_FREQ] Starting ADC Test (100,000 samples)...
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2961 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2953 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2951 us)
+[MAX_FREQ] Maximum Hardware Frequency: 15784.69 Hz
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2953 us)
+[LORA] JOIN FAILED (Code: -1116). Retrying in 10s...
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2945 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2963 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2945 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2955 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2951 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2961 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2952 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2950 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+[LORA] JOIN FAILED (Code: -1116). Retrying in 10s...
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2944 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2957 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2952 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2950 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2951 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2947 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2961 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2958 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2946 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2948 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2964 us)
+[LORA] JOIN FAILED (Code: -1116). Retrying in 10s...
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2948 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2950 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2946 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2956 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2947 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2955 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2970 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2950 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2951 us)
+
+[LORA] JOIN SUCCESSFUL! Connected to TTN.
+
+--------------------------------------------------
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2999 us)
+[TX-MQTT] Average: 0.00 | E2E Latency: 53413 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 48471 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 43529 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 38584 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 33635 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 28692 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2943 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2963 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2948 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2952 us)
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 30292 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 25348 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 20402 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 15459 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 5515 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 575 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2960 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2946 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2951 us)
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 2170 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 3279 us)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2956 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2952 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 6 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2944 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2952 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2956 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2947 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2946 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2956 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2951 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2946 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2956 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2949 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2952 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2956 us)
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2954 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2955 us)
+[TX-MQTT] Average: -0.00 | E2E Latency: 4597 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2958 us)
+
+--------------------------------------------------
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2942 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2952 us)
+[TX-MQTT] Average: -0.00 | E2E Latency: 3002 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2953 us)
+
+--------------------------------------------------
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2947 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2948 us)
+[TX-MQTT] Average: 0.00 | E2E Latency: 3002 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2953 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2945 us)
+
+--------------------------------------------------
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2947 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2951 us)
+[TX-MQTT] Average: 0.00 | E2E Latency: 3002 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2946 us)
+
+--------------------------------------------------
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2951 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2961 us)
+
+[FFT MAIN] Adapted Freq to 79 Hz (Exec time: 2947 us)
+
+[FFT MAIN] Adapted Freq to 95 Hz (Exec time: 2947 us)
+[TX-MQTT] Average: -0.00 | E2E Latency: 5036 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)

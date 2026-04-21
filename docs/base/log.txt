@@ -1,0 +1,203 @@
+==================================================
+=== IoT System Booting ===
+==================================================
+[WIFI] Connecting.....
+[WIFI] Connected.
+
+[LORA] Booting Radio in background...
+
+[MAX_FREQ] Starting ADC Test (100,000 samples)...
+
+[FFT MAIN] Adapted Freq to 10 Hz (Exec time: 2948 us)
+
+[LORA] JOIN SUCCESSFUL! Connected to TTN.
+
+--------------------------------------------------
+[MAX_FREQ] Maximum Hardware Frequency: 15772.30 Hz
+[TX-MQTT] Average: 0.11 | E2E Latency: 5066 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 1735 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 90 Hz (Exec time: 2961 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.09 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 11 Hz (Exec time: 2961 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.04 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 81 Hz (Exec time: 2957 us)
+
+[FFT MAIN] Adapted Freq to 12 Hz (Exec time: 2941 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.03 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.05 | E2E Latency: 1498 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 75 Hz (Exec time: 2963 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.01 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 13 Hz (Exec time: 2963 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.12 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 69 Hz (Exec time: 2968 us)
+
+[FFT MAIN] Adapted Freq to 14 Hz (Exec time: 2946 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+
+[FFT MAIN] Adapted Freq to 64 Hz (Exec time: 2957 us)
+
+[FFT MAIN] Adapted Freq to 15 Hz (Exec time: 2946 us)
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.02 | E2E Latency: 1545 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.01 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 60 Hz (Exec time: 2946 us)
+
+[FFT MAIN] Adapted Freq to 16 Hz (Exec time: 2942 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.05 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.01 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 57 Hz (Exec time: 2947 us)
+
+[FFT MAIN] Adapted Freq to 17 Hz (Exec time: 2944 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.04 | E2E Latency: 1 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.02 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+
+[FFT MAIN] Adapted Freq to 53 Hz (Exec time: 2950 us)
+
+[FFT MAIN] Adapted Freq to 17 Hz (Exec time: 2951 us)
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.02 | E2E Latency: 1503 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 53 Hz (Exec time: 2961 us)
+
+[FFT MAIN] Adapted Freq to 17 Hz (Exec time: 2965 us)
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.07 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------

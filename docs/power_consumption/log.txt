@@ -1,0 +1,157 @@
+--- INA219 Monitor Station Booting ---
+[INIT] INA219 Power Sensor Connected.
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.00
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:107.90
+>Power_mW:400.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:136.50
+>Power_mW:502.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:221.30
+>Power_mW:806.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.50
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:106.50
+>Power_mW:396.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:105.60
+>Power_mW:396.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:109.30
+>Power_mW:396.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:103.60
+>Power_mW:390.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.60
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.30
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:106.60
+>Power_mW:400.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.80
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:105.40
+>Power_mW:400.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.60
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:108.50
+>Power_mW:390.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.60
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:106.70
+>Power_mW:400.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.20
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.40
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.50
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:106.30
+>Power_mW:396.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.50
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:103.10
+>Power_mW:400.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:106.10
+>Power_mW:396.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:105.50
+>Power_mW:396.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.10
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.60
+>Power_mW:174.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.30
+>Power_mW:170.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:106.00
+>Power_mW:396.00
+------------------------------------
+
+[INA219] --- RILEVAMENTO CONSUMI ---
+>Current_mA:45.40
+>Power_mW:174.00
+------------------------------------

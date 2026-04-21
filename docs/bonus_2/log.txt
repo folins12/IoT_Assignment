@@ -1,0 +1,432 @@
+ *  Executing task: C:\Users\afoli\.platformio\penv\Scripts\platformio.exe device monitor --environment target 
+
+--- Terminal on COM12 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+
+
+==================================================
+=== IoT System Booting ===
+==================================================
+[WIFI] Connecting......
+[WIFI] Connected.
+
+[LORA] Booting Radio in background...
+[INIT] Bonus Task (8.2) ENABLED in background.
+
+[MAX_FREQ] Starting ADC Test (100,000 samples)...
+
+[FFT MAIN] Adapted Freq to 10 Hz (Exec time: 2964 us)
+[MAX_FREQ] Maximum Hardware Frequency: 15840.22 Hz
+[LORA] JOIN FAILED (Code: -1116). Retrying in 10s...
+
+[FFT MAIN] Adapted Freq to 90 Hz (Exec time: 2969 us)
+
+========================================
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 4.95 Hz
+[Z-SCORE] Exec: 995 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.95 Hz
+[HAMPEL]  Exec: 637 us | TPR: 1.00 | FPR: 0.01 | MER:  25.0% | FFT Peak: 4.99 Hz
+
+[FFT MAIN] Adapted Freq to 11 Hz (Exec time: 2943 us)
+
+========================================
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 5.01 Hz
+[Z-SCORE] Exec: 997 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.01 Hz
+[HAMPEL]  Exec: 639 us | TPR: 1.00 | FPR: 0.01 | MER:  49.4% | FFT Peak: 4.98 Hz
+
+========================================
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 995 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 643 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.98 Hz
+
+========================================
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 998 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 640 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.98 Hz
+
+========================================
+Testing at P=0.01, WINDOW=5
+[UNFILTERED] FFT Peak: 5.00 Hz
+[Z-SCORE] Exec: 996 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.00 Hz
+[HAMPEL]  Exec: 637 us | TPR: 1.00 | FPR: 0.02 | MER:  36.5% | FFT Peak: 4.99 Hz
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 2441 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 2238 us | TPR: 0.00 | FPR: 0.01 | MER: -18.9% | FFT Peak: 4.99 Hz
+
+[LORA] JOIN SUCCESSFUL! Connected to TTN.
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.11 | E2E Latency: 18582 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 13643 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.09 | E2E Latency: 8702 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.00 | E2E Latency: 3746 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 2443 us | TPR: 0.25 | FPR: 0.00 | MER:  19.8% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 2169 us | TPR: 0.25 | FPR: 0.01 | MER:  11.2% | FFT Peak: 4.97 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.04 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 2464 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 2204 us | TPR: 0.00 | FPR: 0.01 | MER: -23.8% | FFT Peak: 4.98 Hz
+
+[FFT MAIN] Adapted Freq to 81 Hz (Exec time: 2960 us)
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 2515 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 2203 us | TPR: 0.50 | FPR: 0.00 | MER:  23.1% | FFT Peak: 5.00 Hz
+
+========================================
+Testing at P=0.01, WINDOW=15
+[UNFILTERED] FFT Peak: 4.94 Hz
+
+[FFT MAIN] Adapted Freq to 12 Hz (Exec time: 2889 us)
+[Z-SCORE] Exec: 5514 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 2227 us | TPR: 1.00 | FPR: 0.01 | MER:  22.1% | FFT Peak: 4.98 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.03 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 5.00 Hz
+[Z-SCORE] Exec: 4692 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.00 Hz
+[HAMPEL]  Exec: 3800 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.00 Hz
+
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 4625 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 3685 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.99 Hz
+
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 4621 us | TPR: 0.50 | FPR: 0.00 | MER:  22.9% | FFT Peak: 5.00 Hz
+[HAMPEL]  Exec: 3672 us | TPR: 0.50 | FPR: 0.00 | MER:  21.4% | FFT Peak: 5.00 Hz
+
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 5.01 Hz
+[Z-SCORE] Exec: 4622 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.01 Hz
+[HAMPEL]  Exec: 3650 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.01 Hz
+
+========================================
+Testing at P=0.01, WINDOW=31
+[UNFILTERED] FFT Peak: 5.07 Hz
+[Z-SCORE] Exec: 4624 us | TPR: 0.50 | FPR: 0.00 | MER:  23.4% | FFT Peak: 5.03 Hz
+[HAMPEL]  Exec: 3780 us | TPR: 0.50 | FPR: 0.00 | MER:  22.3% | FFT Peak: 5.03 Hz
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.04 | E2E Latency: 1527 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 4.91 Hz
+[Z-SCORE] Exec: 995 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.91 Hz
+[HAMPEL]  Exec: 628 us | TPR: 0.50 | FPR: 0.00 | MER:  40.3% | FFT Peak: 4.89 Hz
+
+[FFT MAIN] Adapted Freq to 75 Hz (Exec time: 2973 us)
+
+========================================
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 5.02 Hz
+[Z-SCORE] Exec: 997 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.02 Hz
+[HAMPEL]  Exec: 642 us | TPR: 0.75 | FPR: 0.01 | MER:  52.4% | FFT Peak: 4.98 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 3 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 5.05 Hz
+[Z-SCORE] Exec: 1074 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.05 Hz
+[HAMPEL]  Exec: 641 us | TPR: 0.75 | FPR: 0.01 | MER:  61.6% | FFT Peak: 5.02 Hz
+
+[FFT MAIN] Adapted Freq to 13 Hz (Exec time: 2959 us)
+
+========================================
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 4.91 Hz
+[Z-SCORE] Exec: 996 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.91 Hz
+[HAMPEL]  Exec: 670 us | TPR: 0.80 | FPR: 0.00 | MER:  58.4% | FFT Peak: 4.94 Hz
+
+========================================
+Testing at P=0.05, WINDOW=5
+[UNFILTERED] FFT Peak: 4.92 Hz
+[Z-SCORE] Exec: 993 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.92 Hz
+[HAMPEL]  Exec: 630 us | TPR: 0.56 | FPR: 0.01 | MER:  44.3% | FFT Peak: 4.94 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.13 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 4.94 Hz
+[Z-SCORE] Exec: 2435 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 2039 us | TPR: 0.09 | FPR: 0.00 | MER:   9.8% | FFT Peak: 4.94 Hz
+
+========================================
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 5.02 Hz
+[Z-SCORE] Exec: 2441 us | TPR: 0.20 | FPR: 0.00 | MER:   8.2% | FFT Peak: 5.04 Hz
+[HAMPEL]  Exec: 2243 us | TPR: 0.80 | FPR: 0.01 | MER:  48.6% | FFT Peak: 5.02 Hz
+
+========================================
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 5.00 Hz
+[Z-SCORE] Exec: 2440 us | TPR: 0.50 | FPR: 0.00 | MER:  36.0% | FFT Peak: 5.03 Hz
+[HAMPEL]  Exec: 2165 us | TPR: 0.75 | FPR: 0.01 | MER:  42.2% | FFT Peak: 4.99 Hz
+
+========================================
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 4.99 Hz
+[Z-SCORE] Exec: 2443 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 2160 us | TPR: 0.60 | FPR: 0.00 | MER:  43.1% | FFT Peak: 4.98 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+[FFT MAIN] Adapted Freq to 69 Hz (Exec time: 2970 us)
+
+========================================
+Testing at P=0.05, WINDOW=15
+[UNFILTERED] FFT Peak: 4.97 Hz
+[Z-SCORE] Exec: 2443 us | TPR: 0.40 | FPR: 0.00 | MER:  34.0% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 2261 us | TPR: 0.40 | FPR: 0.01 | MER:  26.0% | FFT Peak: 4.97 Hz
+
+[FFT MAIN] Adapted Freq to 14 Hz (Exec time: 2974 us)
+
+========================================
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 5.03 Hz
+[Z-SCORE] Exec: 4692 us | TPR: 0.36 | FPR: 0.00 | MER:  27.7% | FFT Peak: 5.09 Hz
+[HAMPEL]  Exec: 3551 us | TPR: 0.55 | FPR: 0.00 | MER:  41.9% | FFT Peak: 5.01 Hz
+
+========================================
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 4.96 Hz
+[Z-SCORE] Exec: 4614 us | TPR: 0.08 | FPR: 0.00 | MER:   5.6% | FFT Peak: 4.97 Hz
+[HAMPEL]  Exec: 3590 us | TPR: 0.33 | FPR: 0.00 | MER:  24.2% | FFT Peak: 5.10 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (5/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 5.19 Hz
+[Z-SCORE] Exec: 4617 us | TPR: 0.17 | FPR: 0.00 | MER:  12.5% | FFT Peak: 5.13 Hz
+[HAMPEL]  Exec: 3622 us | TPR: 0.50 | FPR: 0.00 | MER:  33.3% | FFT Peak: 5.14 Hz
+
+========================================
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 4.98 Hz
+[Z-SCORE] Exec: 4621 us | TPR: 0.38 | FPR: 0.00 | MER:  25.3% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 3651 us | TPR: 0.25 | FPR: 0.00 | MER:  13.2% | FFT Peak: 4.94 Hz
+
+========================================
+Testing at P=0.05, WINDOW=31
+[UNFILTERED] FFT Peak: 5.04 Hz
+[Z-SCORE] Exec: 4634 us | TPR: 0.17 | FPR: 0.00 | MER:  17.3% | FFT Peak: 4.98 Hz
+[HAMPEL]  Exec: 3647 us | TPR: 0.33 | FPR: 0.00 | MER:  19.7% | FFT Peak: 4.96 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: 0.00 | E2E Latency: 3 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+
+========================================
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 4.90 Hz
+[Z-SCORE] Exec: 996 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.90 Hz
+[HAMPEL]  Exec: 629 us | TPR: 0.56 | FPR: 0.00 | MER:  54.1% | FFT Peak: 4.91 Hz
+
+[FFT MAIN] Adapted Freq to 64 Hz (Exec time: 2964 us)
+
+========================================
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 5.01 Hz
+[Z-SCORE] Exec: 998 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.01 Hz
+[HAMPEL]  Exec: 635 us | TPR: 0.40 | FPR: 0.00 | MER:  39.3% | FFT Peak: 4.99 Hz
+
+[FFT MAIN] Adapted Freq to 15 Hz (Exec time: 2963 us)
+
+========================================
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 5.07 Hz
+[Z-SCORE] Exec: 995 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.07 Hz
+[HAMPEL]  Exec: 625 us | TPR: 0.64 | FPR: 0.00 | MER:  58.8% | FFT Peak: 5.10 Hz
+
+========================================
+Testing at P=0.10, WINDOW=5
+[UNFILTERED] FFT Peak: 4.83 Hz
+[Z-SCORE] Exec: 996 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 4.83 Hz
+[HAMPEL]  Exec: 630 us | TPR: 0.50 | FPR: 0.00 | MER:  45.3% | FFT Peak: 4.96 Hz
+[TX-LORA] Uplink SUCCESS: Data sent to TTN.
+--------------------------------------------------
+
+
+--------------------------------------------------
+
+========================================
+Testing at P=0.10, WINDOW=5
+[TX-MQTT] Average: 0.02 | E2E Latency: 1576 ms
+[UNFILTERED] FFT Peak: 5.04 Hz
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (1/6)
+[Z-SCORE] Exec: 1020 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.04 Hz
+--------------------------------------------------
+[HAMPEL]  Exec: 629 us | TPR: 0.64 | FPR: 0.00 | MER:  55.4% | FFT Peak: 5.01 Hz
+
+
+========================================
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.07 Hz
+[Z-SCORE] Exec: 2440 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.07 Hz
+[HAMPEL]  Exec: 2127 us | TPR: 0.57 | FPR: 0.01 | MER:  36.0% | FFT Peak: 5.00 Hz
+
+========================================
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.07 Hz
+[Z-SCORE] Exec: 2436 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.07 Hz
+[HAMPEL]  Exec: 2164 us | TPR: 0.45 | FPR: 0.02 | MER:  33.4% | FFT Peak: 4.98 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (2/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.10 Hz
+[Z-SCORE] Exec: 2434 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.10 Hz
+[HAMPEL]  Exec: 2125 us | TPR: 0.58 | FPR: 0.00 | MER:  46.7% | FFT Peak: 4.98 Hz
+
+[FFT MAIN] Adapted Freq to 60 Hz (Exec time: 2961 us)
+
+========================================
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.00 Hz
+[Z-SCORE] Exec: 2434 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.00 Hz
+[HAMPEL]  Exec: 2189 us | TPR: 0.22 | FPR: 0.00 | MER:  14.4% | FFT Peak: 5.00 Hz
+
+[FFT MAIN] Adapted Freq to 16 Hz (Exec time: 2969 us)
+
+========================================
+Testing at P=0.10, WINDOW=15
+[UNFILTERED] FFT Peak: 5.03 Hz
+[Z-SCORE] Exec: 2439 us | TPR: 0.22 | FPR: 0.00 | MER:  19.5% | FFT Peak: 4.99 Hz
+[HAMPEL]  Exec: 2176 us | TPR: 0.44 | FPR: 0.01 | MER:  32.2% | FFT Peak: 4.99 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.04 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (3/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 5.02 Hz
+[Z-SCORE] Exec: 4616 us | TPR: 0.00 | FPR: 0.00 | MER:   0.0% | FFT Peak: 5.02 Hz
+[HAMPEL]  Exec: 3637 us | TPR: 0.33 | FPR: 0.00 | MER:  13.0% | FFT Peak: 4.99 Hz
+
+========================================
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 5.11 Hz
+[Z-SCORE] Exec: 4616 us | TPR: 0.06 | FPR: 0.00 | MER:   2.5% | FFT Peak: 5.14 Hz
+[HAMPEL]  Exec: 3574 us | TPR: 0.29 | FPR: 0.00 | MER:  15.9% | FFT Peak: 5.05 Hz
+
+========================================
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 4.94 Hz
+[Z-SCORE] Exec: 4617 us | TPR: 0.06 | FPR: 0.00 | MER:   4.1% | FFT Peak: 4.94 Hz
+[HAMPEL]  Exec: 3594 us | TPR: 0.38 | FPR: 0.00 | MER:  22.6% | FFT Peak: 4.97 Hz
+
+--------------------------------------------------
+[TX-MQTT] Average: -0.01 | E2E Latency: 2 ms
+[METRICS] Payload: 4 bytes (vs 2000 bytes over-sampled)
+[TX-LORA] Duty cycle paused (4/6)
+--------------------------------------------------
+
+
+========================================
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 4.96 Hz
+[Z-SCORE] Exec: 4757 us | TPR: 0.22 | FPR: 0.00 | MER:  20.3% | FFT Peak: 4.93 Hz
+[HAMPEL]  Exec: 3585 us | TPR: 0.22 | FPR: 0.00 | MER:  17.3% | FFT Peak: 4.93 Hz
+
+========================================
+Testing at P=0.10, WINDOW=31
+[UNFILTERED] FFT Peak: 5.17 Hz
+[Z-SCORE] Exec: 4615 us | TPR: 0.15 | FPR: 0.00 | MER:  12.5% | FFT Peak: 5.20 Hz
+[HAMPEL]  Exec: 3602 us | TPR: 0.38 | FPR: 0.00 | MER:  27.3% | FFT Peak: 5.16 Hz
+
+[FFT MAIN] Adapted Freq to 57 Hz (Exec time: 2922 us)

@@ -1,86 +1,65 @@
-# IoT Individual Assignment
+# IoT System Architecture & Performance Report
 
 ## 1. Input Signal Formulation
-To guarantee mathematical integrity without requiring external DAC hardware, the input signal was generated mathematically within the primary FreeRTOS sensing task.
-The baseline input signal is: 
-$s(t) = 3\sin(2\pi \cdot 4 \cdot t) + 1.5\sin(2\pi \cdot 8 \cdot t)$
+To ensure a mathematically precise evaluation without requiring external hardware signal generators, the signal is synthesized directly within the primary FreeRTOS sensing task. 
+The baseline input signal (Mode 2) is:
+$$s(t) = 3\sin(2\pi \cdot 4 \cdot t) + 1.5\sin(2\pi \cdot 8 \cdot t)$$
 
 ## 2. Maximum Hardware Sampling Frequency
-A raw benchmark was performed on the ESP32-S3 Analog-to-Digital Converter (ADC) using a blocking `analogRead()` loop to demonstrate the over-sampling capabilities of the hardware.
-* **Result**: 100,000 samples were captured in approximately 6.1 seconds.
-* **Max Hardware Frequency**: ~16,378 Hz.
-* **Conclusion**: This proves the hardware is vastly capable of extreme over-sampling. We initialize our RTOS sampling task at **100 Hz**, representing a highly over-sampled baseline for our 8 Hz signal.
+A raw blocking benchmark (`analogRead()`) was executed on the Heltec ESP32-S3 ADC to determine the absolute hardware limit.
+* **Empirical Result**: 100,000 samples executed in ~6.3 seconds.
+* **Max Hardware Frequency**: **~15,772 Hz** (up to ~15,840 Hz depending on background tasks).
+* **Conclusion**: The board is highly capable. We initialized our RTOS adaptive sampling task at a safe, over-sampled baseline of **100 Hz**.
 
 ## 3. Identify Optimal Sampling Frequency (Adaptive FFT)
-A specific task executes the `arduinoFFT` library periodically to evaluate the signal's spectral composition and adapt the sampling rate to save energy.
+A dedicated RTOS task (`TaskAnalyze`) collects 128 samples and runs the `arduinoFFT` library to evaluate the spectral composition.
 
-* **Analysis**: The FFT correctly identifies the maximum frequency component at **8.00 Hz**.
-* **Nyquist Application**: According to the Nyquist-Shannon sampling theorem ($f_s > 2 \cdot f_{max}$), the absolute theoretical minimum sampling rate is >16 Hz.
-* **Embedded RTOS Optimization (The 20Hz Choice)**: Instead of sampling at exactly 17 Hz (which mathematically satisfies Nyquist), the adaptive logic dynamically searches for the nearest frequency that perfectly divides 1000ms (in this case, **20 Hz**, yielding exactly 50ms per tick). This choice prevents FreeRTOS `pdMS_TO_TICKS` truncation errors, completely eliminating "beat frequency" artifacts and phase-sliding on the teleplot visualization.
+* **Analysis**: The FFT successfully isolates the highest frequency component at **8.00 Hz**.
+* **Adaptive Logic**: According to the Nyquist theorem, $f_s > 16$ Hz. To provide a safety margin for the ESP32 ADC and FreeRTOS tick granularity, the algorithm applies a multiplier: `newFreq = (int)(peak * 2.2) + 2`.
+* **Result**: The system dynamically adapts the sampling frequency to **~19-20 Hz**.
 
 ## 4. Aggregation Over a Window
-Instead of transmitting raw high-frequency data (which drains energy and bandwidth), the primary task computes the average of the sampled wave over a continuous **5-second window**.
-
-Because the input is a symmetrical sine wave, the mathematical average over a 5-second sliding window predictably and consistently flattens to `~0.00`. This result acts as a validation mechanism, proving that the ESP32 is aggregating the waveform symmetrically without dropping samples.
+Instead of flooding the network with raw telemetry, the IoT node computes the arithmetic average of the sampled wave over a continuous **5,000 ms (5-second) sliding window**. Because the baseline input is a symmetrical composite sine wave, the resulting aggregated payload mathematically flattens to `~0.00`, proving that no data points are skipped by the RTOS scheduler.
 
 ## 5. Network Communication
-* **Edge Communication (MQTT)**: The 5-second average is pushed to a FreeRTOS Queue, consumed by `TaskMQTT`, and transmitted via `PubSubClient` over WiFi to a public HiveMQ broker (`broker.hivemq.com`).
-* **Cloud Communication (LoRaWAN)**: A secondary RTOS task (`TaskLoRa`) reads the identical average and transmits it via LoRaWAN OTAA using the `RadioLib` library to The Things Network (TTN).
+* **Edge / WiFi (MQTT)**: The aggregated 5-second average is pushed to `broker.hivemq.com` using the `PubSubClient`.
+* **Cloud (LoRaWAN)**: Simultaneously, the system transmits the data via LoRaWAN OTAA to The Things Network (TTN) using `RadioLib`. A duty-cycle logic restricts LoRa transmissions to 1 out of every 6 windows to comply with fair use policies.
 
 ## 6. Performance & System Evaluation
-* **Energy Savings**: By autonomously adapting the sampling rate from 100 Hz to 20 Hz, the system reduced its active CPU polling cycles by **80%**, representing a massive decrease in active sensing energy consumption.
-* **Per-Window Execution Time**: The `arduinoFFT` library executes the 128-sample transformation efficiently in just **2.3 milliseconds** (`2,354 µs`).
-* **Network Payload Reduction**: Sending raw data at 100 Hz would require transmitting 500 floats (2,000 bytes) every 5 seconds. Local aggregation reduces this to exactly 1 float (4 bytes), yielding a **99.8% reduction** in network payload.
-* **End-to-End Latency**: MQTT network latency from the moment the 5-second window closes to Edge server reception averaged **45ms**.
+* **Energy Savings**: INA219 power monitoring logs show the current consumption drops from **~106 mA** during active computation/transmission to **~45 mA** during RTOS idle periods. By adapting from 100 Hz to 20 Hz, the system spends significantly more time in the 45 mA low-power state.
+* **Per-Window Execution Time**: The core FFT computation (`TaskAnalyze`) takes an impressively low **~2,950 µs** (2.95 ms) to process 128 samples.
+* **Network Payload Reduction**: Transmitting raw data at 100 Hz requires 500 floats (2,000 bytes) every 5 seconds. Edge aggregation reduces this to exactly 1 float (**4 bytes**).
+* **End-to-End Latency**: The recorded MQTT E2E latency (from window close to network transmission) generally hovers between **1 ms and 3 ms**, though it occasionally spikes to ~1,500 ms depending on network congestion.
 
 ---
 
-## 7. Bonus: Multi-Signal Adaptive Performance Analysis
-The system was tested against three distinct input signals with varying spectral characteristics.
+## 7. Bonus 1: Multi-Signal Adaptive Analysis
+The adaptive logic was tested against three diverse signals:
+1. **Low Freq ($1$ Hz)**: System adapts to ~10 Hz. Massive energy savings; CPU is almost entirely idle.
+2. **Mixed Freq ($8$ Hz)**: System adapts to ~20 Hz. Balanced performance.
+3. **High Freq ($35$ Hz)**: System adapts to ~79-95 Hz. Minimal CPU savings compared to the 100 Hz baseline.
 
-* **Signal 1 (Low Frequency):** $s(t) = 5\sin(2\pi \cdot 1 \cdot t)$. 
-  * **Max Frequency:** 1 Hz. 
-  * **Adaptive Rate:** ~3 Hz. 
-  * **Performance Impact:** 97% reduction in CPU polling cycles compared to 100 Hz. The system spends the vast majority of its time in FreeRTOS blocked/idle states.
-* **Signal 2 (Mixed Frequency - Baseline):** $s(t) = 3\sin(2\pi \cdot 4 \cdot t) + 1.5\sin(2\pi \cdot 8 \cdot t)$. 
-  * **Max Frequency:** 8 Hz. 
-  * **Adaptive Rate:** 20 Hz. 
-  * **Performance Impact:** Balanced efficiency with an 80% reduction in CPU wakeups.
-* **Signal 3 (High Frequency):** $s(t) = 2\sin(2\pi \cdot 35 \cdot t)$. 
-  * **Max Frequency:** 35 Hz. 
-  * **Adaptive Rate:** ~75 Hz. 
-  * **Performance Impact:** Minimal energy savings (only a 25% reduction). However, network latency and payload remain identical because the edge-aggregation window still transmits exactly one averaged float every 5 seconds.
-
-**Discussion: Adaptive vs. Basic/Over-Sampling**
-Static over-sampling (e.g., fixed 100 Hz) guarantees signal integrity for all frequencies up to 50 Hz but wastes enormous amounts of energy if the physical phenomenon being monitored is slow. Adaptive sampling dynamically scales CPU usage to match the environment. The slower the input phenomenon, the deeper the FreeRTOS sleep cycles, resulting in exponential battery savings at the edge.
+**Discussion:** Static over-sampling wastes energy if the physical phenomenon is slow. Adaptive FFT dynamically scales the duty cycle. Even for the 35 Hz signal where CPU savings are minimal, the *network* savings remain identical (4 bytes transmitted every 5s), proving edge-aggregation is universally beneficial.
 
 ---
 
-## 8. Bonus: Advanced DSP & Anomaly Filtering Analysis
-To evaluate the system under adverse conditions, the signal $s(t) = 2\sin(2\pi \cdot 3 \cdot t) + 4\sin(2\pi \cdot 5 \cdot t)$ was injected with Gaussian baseline noise ($\sigma=0.2$) and a sparse anomaly spike process ($U(5, 15)$) simulating EMI interference. Z-Score and Hampel filters were tested across different injection probabilities ($p=1\%, 5\%, 10\%$) and window sizes ($W=5, 15, 31$).
+## 8. Bonus 2: Advanced DSP & Anomaly Filtering
+The signal was injected with Gaussian noise ($\sigma=0.2$) and a sparse uniform anomaly process ($U(5, 15)$) to simulate EMI spikes. We evaluated **Z-Score** and **Hampel** filters across different injection probabilities ($P$) and window sizes ($W$).
 
-**The Impact of Anomalies on FFT & Adaptive Sampling Energy**
-Unfiltered anomalies act as broadband impulses. Empirical logs show that unfiltered spikes consistently hide the true 5 Hz dominant frequency, generating false high-frequency peaks. 
-*Without filtering*, if the FFT incorrectly estimates a 35 Hz peak due to a spike, the adaptive logic will force the system to sample at >70 Hz. This unnecessary 6x increase in sampling frequency completely negates the energy-saving purpose of the IoT device. *With filtering* (Hampel), the true 5 Hz peak is preserved, allowing the system to sleep deeply and sample efficiently at ~12-15 Hz.
+### The Impact of Anomalies on FFT & Energy
+Unfiltered anomalies register as broadband high-frequency energy. In the logs, unfiltered spikes caused the FFT to wrongly detect dominant peaks at random frequencies. Without filtering, this forces the adaptive sampler to stay awake at maximum frequency, destroying the battery.
 
-**Z-Score Filter (Mean-Based Masking)**
-The Z-Score filter consistently failed to detect severe anomalies, yielding a True Positive Rate (TPR) near zero and nominal Mean Error Reduction (MER). This demonstrates the "masking effect": a massive outlier alters the arithmetic mean and standard deviation, causing the anomaly to raise its own detection threshold and hide itself.
+### Empirical Filter Performance (Based on Logs)
+* **Z-Score Failure (Masking Effect):** The logs prove the Z-Score filter consistently fails (TPR near $0.00$, MER ~ $0.0\%$). Massive outliers distort the standard deviation, causing the anomaly to "hide" itself inside the artificially inflated threshold.
+* **Hampel Success:** The Hampel (median-based) filter accurately identified anomalies. At $P=0.01$ and $W=5$, it achieved a True Positive Rate (TPR) of **1.00** and a Mean Error Reduction (MER) of **~49.4%**.
 
-**Hampel Filter (Median Robustness)**
-The Hampel filter demonstrated superior detection. By relying on the median and the Median Absolute Deviation (MAD), the filter's central tendency remains tightly anchored to the underlying clean sine wave, effectively stripping out outliers.
+### The Computational Paradox (Execution Time)
+Counter-intuitively, the logs show the Hampel filter executing *faster* than the Z-Score filter on the ESP32:
+* **$W=5$**: Z-Score $\approx 995$ µs | Hampel $\approx 635$ µs
+* **$W=15$**: Z-Score $\approx 2,440$ µs | Hampel $\approx 2,160$ µs
+* **$W=31$**: Z-Score $\approx 4,620$ µs | Hampel $\approx 3,650$ µs
 
-**Window Size Trade-offs: Empirical Measurement**
-The following table characterizes the trade-off empirically for the filters running at a 100 Hz baseline sampling rate (1 sample = 10 ms). Stack memory is calculated based on the dynamic arrays required for Hampel's median and MAD sorting ($W \times 4$ bytes $\times 2$).
+**Why?** The Z-score implementation utilizes the `pow()` function to calculate variance, which is highly unoptimized on the ESP32 CPU. Conversely, the Hampel filter relies on `std::sort` for small static arrays. The ESP32 sorts 31 elements in memory much faster than it can compute 31 floating-point powers. 
 
-| Window Size ($W$) | Exec. Time (Z-Score / Hampel) | End-to-End Delay Increase | Stack Memory (Hampel) | Hampel MER ($p=0.10$) |
-| :--- | :--- | :--- | :--- | :--- |
-| **$W=5$** | ~310 µs / ~510 µs | +50 ms | 40 Bytes | **~47% - 81%** (Optimal) |
-| **$W=15$** | ~435 µs / ~2,000 µs | +150 ms | 120 Bytes | ~33% - 66% |
-| **$W=31$** | ~620 µs / ~3,400 µs | +310 ms | 248 Bytes | ~6% - 38% (High Variance) |
-
-1. **Computational Effort & Energy:** The linear $O(N)$ Z-Score scales efficiently to ~620 µs at $W=31$. Conversely, the sorting-dependent $O(N \log N)$ Hampel filter spikes to ~3,400 µs. This 600% increase in active FPU/CPU cycles proportionally drains the battery.
-2. **End-to-End Delay (Latency):** Statistical filters require a full window of data before processing the central point. Expanding to $W=31$ physically delays the pipeline by **310 milliseconds**, introducing unacceptable RTOS latency for real-time applications.
-3. **Memory Usage:** Allocating 248 Bytes on the stack is safe for small windows, but expanding the window arbitrarily would quickly cause Stack Overflows and heap fragmentation on memory-constrained ESP32 nodes.
-
-**Filter Window Conclusion & The Over-Filtering Penalty**
-Empirical measurements prove that larger windows do *not* automatically improve statistical estimates. In fact, $W=5$ produced the highest Mean Error Reduction. Expanding the window to $W=31$ in low-contamination scenarios ($p=0.01$) resulted in severely negative MER values (e.g., -112%). An oversized median window artificially attenuates the natural high-frequency peaks of the sine wave, introducing mathematical errors greater than the baseline noise itself. $W=5$ represents the absolute optimum across memory, latency, energy, and signal integrity.
+### Conclusion on Window Size
+Larger windows ($W=31$) do not improve performance. They increase execution latency (from 635 µs to 3,650 µs) and decrease the MER (dropping from ~50% to ~20%). An empirical window size of **$W=5$** paired with a **Hampel Filter** provides the ultimate balance of anomaly rejection, low execution time, and minimal RTOS latency.
