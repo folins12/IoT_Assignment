@@ -36,7 +36,7 @@ Adafruit_INA219 ina219;
 bool ina219_connected = false;
 
 // DSP & FFT Parameters
-#define SIGNAL_TEST_MODE 2
+#define SIGNAL_TEST_MODE 1
 const uint16_t samples = 128;
 double vReal[samples];
 double vImag[samples];
@@ -63,11 +63,11 @@ void TaskSensor(void *pvParameters) {
     float signal = 0.0;
     
     #if SIGNAL_TEST_MODE == 1
-        signal = 5.0 * sin(2 * PI * 1 * t) + 10.0;
+        signal = 5.0 * sin(2 * PI * 1 * t);
     #elif SIGNAL_TEST_MODE == 2
-        signal = 3.0 * sin(2 * PI * 4 * t) + 1.5 * sin(2 * PI * 8 * t) + 10.0;
+        signal = 3.0 * sin(2 * PI * 4 * t) + 1.5 * sin(2 * PI * 8 * t);
     #elif SIGNAL_TEST_MODE == 3
-        signal = 2.0 * sin(2 * PI * 35 * t) + 10.0;
+        signal = 2.0 * sin(2 * PI * 35 * t);
     #endif
     
     if (collect_fft_data && fft_index < samples) {
@@ -191,13 +191,14 @@ void TaskLoRa(void *pvParameters) {
     
     node.beginOTAA(joinEUI, devEUI, appKey, appKey);
     
-    // Join Network Loop
+    // Join Network Loop// Join Network Loop
     while(!node.isActivated()) {
       Serial.println("[LORA] Attempting TTN Join Request...");
       int join_state = node.activateOTAA();
       
-      if (join_state == RADIOLIB_ERR_NONE) {
-        Serial.println("[LORA] JOIN SUCCESSFUL! Connected to TTN.");
+      // Controlliamo direttamente se si è attivata, ignorando i finti errori
+      if (node.isActivated()) {
+        Serial.println("\n[LORA] JOIN SUCCESSFUL! Connected to TTN.");
       } else {
         Serial.printf("[LORA] JOIN FAILED (Code: %d). Retrying in 10s...\n", join_state);
         vTaskDelay(pdMS_TO_TICKS(10000));
