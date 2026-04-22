@@ -1,0 +1,879 @@
+==================================================
+=== IoT System Booting ===
+==================================================
+[SYSTEM] Hardware ADC Benchmark Started...
+[SYSTEM] Max Hardware Rate : 16164 Hz
+[SYSTEM] Init Sampling Rate: 100 Hz
+
+[WIFI] Connecting.......
+[WIFI] Connected.
+[INIT] Bonus Task Enabled in background.
+[LoRaWAN] Attempting background TTN Join...
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.08
+>> E2E Latency  : 7198 ms
+>> FFT Peak     : 4.01 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 5 windows)
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.01 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 4 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  321 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec  663 us | TPR 0.00 | FPR 0.02 | MER  -1.9% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.02
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 3 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  3.97 Hz
+> Z-Score Filter  : Exec  320 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.97 Hz
+> Hampel Filter   : Exec  665 us | TPR 0.00 | FPR 0.01 | MER  -2.3% | Peak  3.97 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  321 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.01 Hz
+> Hampel Filter   : Exec  665 us | TPR 1.00 | FPR 0.01 | MER  33.9% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  321 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec  665 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.04
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 2 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  4.02 Hz
+> Z-Score Filter  : Exec  346 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.02 Hz
+> Hampel Filter   : Exec  659 us | TPR 1.00 | FPR 0.01 | MER  56.0% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  4.05 Hz
+> Z-Score Filter  : Exec  455 us | TPR 1.00 | FPR 0.00 | MER  49.2% | Peak  4.01 Hz
+> Hampel Filter   : Exec 2450 us | TPR 1.00 | FPR 0.00 | MER  51.9% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  455 us | TPR 1.00 | FPR 0.00 | MER  34.3% | Peak  4.00 Hz
+> Hampel Filter   : Exec 2427 us | TPR 1.00 | FPR 0.01 | MER  20.9% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.03
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 1 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  3.99 Hz
+> Z-Score Filter  : Exec  456 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.99 Hz
+> Hampel Filter   : Exec 2453 us | TPR 0.50 | FPR 0.00 | MER  13.0% | Peak  3.99 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  3.99 Hz
+> Z-Score Filter  : Exec  456 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.99 Hz
+> Hampel Filter   : Exec 2424 us | TPR 1.00 | FPR 0.01 | MER  21.2% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  456 us | TPR 0.50 | FPR 0.00 | MER  24.8% | Peak  4.00 Hz
+> Hampel Filter   : Exec 2384 us | TPR 1.00 | FPR 0.00 | MER  40.3% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  3.99 Hz
+> Z-Score Filter  : Exec  668 us | TPR 0.50 | FPR 0.00 | MER  36.2% | Peak  3.99 Hz
+> Hampel Filter   : Exec 3603 us | TPR 1.00 | FPR 0.00 | MER  47.9% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  649 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec 3721 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  650 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec 3623 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.03 Hz
+> Z-Score Filter  : Exec  650 us | TPR 0.67 | FPR 0.00 | MER  46.5% | Peak  3.99 Hz
+> Hampel Filter   : Exec 3646 us | TPR 0.67 | FPR 0.00 | MER  46.9% | Peak  3.99 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.04
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 6 windows)
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.01
+>> E2E Latency  : 5957 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 5 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.02 Hz
+> Z-Score Filter  : Exec  648 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.02 Hz
+> Hampel Filter   : Exec 3603 us | TPR 0.25 | FPR 0.00 | MER  15.4% | Peak  3.99 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  326 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.01 Hz
+> Hampel Filter   : Exec  664 us | TPR 0.80 | FPR 0.00 | MER  59.0% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  3.95 Hz
+> Z-Score Filter  : Exec  320 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.95 Hz
+> Hampel Filter   : Exec  658 us | TPR 1.00 | FPR 0.02 | MER  68.6% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 4 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  4.06 Hz
+> Z-Score Filter  : Exec  327 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.06 Hz
+> Hampel Filter   : Exec  647 us | TPR 1.00 | FPR 0.01 | MER  77.0% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  3.97 Hz
+> Z-Score Filter  : Exec  325 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.97 Hz
+> Hampel Filter   : Exec  654 us | TPR 0.75 | FPR 0.00 | MER  54.5% | Peak  3.99 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  3.96 Hz
+> Z-Score Filter  : Exec  326 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.96 Hz
+> Hampel Filter   : Exec  653 us | TPR 0.80 | FPR 0.01 | MER  55.4% | Peak  3.98 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 3 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  3.97 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.38 | FPR 0.00 | MER  32.6% | Peak  4.00 Hz
+> Hampel Filter   : Exec 2262 us | TPR 0.88 | FPR 0.01 | MER  66.9% | Peak  3.99 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  3.96 Hz
+> Z-Score Filter  : Exec  454 us | TPR 0.60 | FPR 0.00 | MER  50.0% | Peak  3.97 Hz
+> Hampel Filter   : Exec 2376 us | TPR 0.80 | FPR 0.01 | MER  54.3% | Peak  3.98 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  3.96 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.12 | FPR 0.00 | MER  12.6% | Peak  3.90 Hz
+> Hampel Filter   : Exec 2347 us | TPR 0.88 | FPR 0.00 | MER  62.4% | Peak  3.95 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  4.04 Hz
+> Z-Score Filter  : Exec  454 us | TPR 1.00 | FPR 0.00 | MER  68.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec 2463 us | TPR 1.00 | FPR 0.01 | MER  60.9% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.05
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 2 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  4.03 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.03 Hz
+> Hampel Filter   : Exec 2246 us | TPR 0.44 | FPR 0.01 | MER  30.1% | Peak  4.06 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  648 us | TPR 0.38 | FPR 0.00 | MER  34.5% | Peak  3.97 Hz
+> Hampel Filter   : Exec 3572 us | TPR 0.50 | FPR 0.00 | MER  40.5% | Peak  3.97 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.02 Hz
+> Z-Score Filter  : Exec  645 us | TPR 0.33 | FPR 0.00 | MER  30.7% | Peak  3.99 Hz
+> Hampel Filter   : Exec 3550 us | TPR 0.58 | FPR 0.00 | MER  48.1% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Disconnected (Retry in 1 windows)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.05 Hz
+> Z-Score Filter  : Exec  646 us | TPR 0.60 | FPR 0.00 | MER  39.8% | Peak  4.01 Hz
+> Hampel Filter   : Exec 3599 us | TPR 0.60 | FPR 0.00 | MER  37.2% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  3.90 Hz
+> Z-Score Filter  : Exec  649 us | TPR 0.43 | FPR 0.00 | MER  36.5% | Peak  3.97 Hz
+> Hampel Filter   : Exec 3596 us | TPR 0.71 | FPR 0.00 | MER  57.7% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.05 Hz
+> Z-Score Filter  : Exec  649 us | TPR 0.50 | FPR 0.00 | MER  32.6% | Peak  4.01 Hz
+> Hampel Filter   : Exec 3619 us | TPR 0.33 | FPR 0.00 | MER  24.8% | Peak  4.01 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.05
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  4.02 Hz
+> Z-Score Filter  : Exec  325 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.02 Hz
+> Hampel Filter   : Exec  652 us | TPR 0.60 | FPR 0.00 | MER  54.3% | Peak  3.98 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  4.06 Hz
+> Z-Score Filter  : Exec  325 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.06 Hz
+> Hampel Filter   : Exec  658 us | TPR 0.67 | FPR 0.00 | MER  52.6% | Peak  4.03 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  4.05 Hz
+> Z-Score Filter  : Exec  325 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.05 Hz
+> Hampel Filter   : Exec  656 us | TPR 0.78 | FPR 0.00 | MER  68.9% | Peak  4.04 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  3.92 Hz
+> Z-Score Filter  : Exec  321 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.92 Hz
+> Hampel Filter   : Exec  664 us | TPR 0.79 | FPR 0.00 | MER  71.1% | Peak  3.95 Hz
+>> Cloud Link   : TTN Uplink SUCCESS
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 5687 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (1/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  4.09 Hz
+> Z-Score Filter  : Exec  316 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.09 Hz
+> Hampel Filter   : Exec  651 us | TPR 0.64 | FPR 0.00 | MER  56.5% | Peak  4.02 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  4.03 Hz
+> Z-Score Filter  : Exec  446 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.03 Hz
+> Hampel Filter   : Exec 2209 us | TPR 0.62 | FPR 0.01 | MER  41.9% | Peak  3.97 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  3.98 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.40 | FPR 0.00 | MER  32.9% | Peak  3.94 Hz
+> Hampel Filter   : Exec 2428 us | TPR 0.60 | FPR 0.00 | MER  48.5% | Peak  3.98 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (2/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  4.13 Hz
+> Z-Score Filter  : Exec  451 us | TPR 0.07 | FPR 0.00 | MER   4.5% | Peak  4.19 Hz
+> Hampel Filter   : Exec 2255 us | TPR 0.33 | FPR 0.00 | MER  33.0% | Peak  4.14 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  3.99 Hz
+> Z-Score Filter  : Exec  450 us | TPR 0.38 | FPR 0.00 | MER  33.5% | Peak  4.05 Hz
+> Hampel Filter   : Exec 2218 us | TPR 0.62 | FPR 0.01 | MER  52.4% | Peak  4.02 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  4.08 Hz
+> Z-Score Filter  : Exec  453 us | TPR 0.18 | FPR 0.00 | MER  16.5% | Peak  4.01 Hz
+> Hampel Filter   : Exec 2379 us | TPR 0.73 | FPR 0.00 | MER  65.9% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (3/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  3.95 Hz
+> Z-Score Filter  : Exec  641 us | TPR 0.18 | FPR 0.00 | MER  16.1% | Peak  3.98 Hz
+> Hampel Filter   : Exec 3601 us | TPR 0.27 | FPR 0.00 | MER  24.7% | Peak  4.02 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.07 Hz
+> Z-Score Filter  : Exec  644 us | TPR 0.17 | FPR 0.00 | MER  17.3% | Peak  4.08 Hz
+> Hampel Filter   : Exec 3569 us | TPR 0.50 | FPR 0.00 | MER  45.7% | Peak  4.08 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  645 us | TPR 0.17 | FPR 0.00 | MER  14.5% | Peak  4.05 Hz
+> Hampel Filter   : Exec 3583 us | TPR 0.58 | FPR 0.00 | MER  42.1% | Peak  4.02 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.05
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (4/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.03 Hz
+> Z-Score Filter  : Exec  650 us | TPR 0.30 | FPR 0.00 | MER  30.9% | Peak  3.99 Hz
+> Hampel Filter   : Exec 3538 us | TPR 0.50 | FPR 0.00 | MER  44.5% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.09 Hz
+> Z-Score Filter  : Exec  643 us | TPR 0.16 | FPR 0.00 | MER  19.1% | Peak  4.05 Hz
+> Hampel Filter   : Exec 3583 us | TPR 0.37 | FPR 0.00 | MER  35.3% | Peak  4.03 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  319 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec  692 us | TPR 0.00 | FPR 0.01 | MER  -2.5% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  3.98 Hz
+> Z-Score Filter  : Exec  321 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.98 Hz
+> Hampel Filter   : Exec  657 us | TPR 0.67 | FPR 0.00 | MER  48.4% | Peak  3.99 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.02
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (5/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  3.97 Hz
+> Z-Score Filter  : Exec  320 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.97 Hz
+> Hampel Filter   : Exec  675 us | TPR 0.00 | FPR 0.01 | MER   0.9% | Peak  3.97 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  320 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.01 Hz
+> Hampel Filter   : Exec  769 us | TPR 1.00 | FPR 0.01 | MER  25.5% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 5
+> Unfiltered Peak :  3.92 Hz
+> Z-Score Filter  : Exec  319 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.92 Hz
+> Hampel Filter   : Exec  663 us | TPR 0.67 | FPR 0.00 | MER  37.7% | Peak  3.96 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.05
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  4.04 Hz
+> Z-Score Filter  : Exec  456 us | TPR 0.50 | FPR 0.00 | MER  33.4% | Peak  4.03 Hz
+> Hampel Filter   : Exec 2358 us | TPR 0.75 | FPR 0.00 | MER  52.7% | Peak  3.98 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  456 us | TPR 1.00 | FPR 0.00 | MER  40.4% | Peak  4.00 Hz
+> Hampel Filter   : Exec 2493 us | TPR 1.00 | FPR 0.01 | MER  25.4% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  3.99 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.33 | FPR 0.00 | MER  18.5% | Peak  3.99 Hz
+> Hampel Filter   : Exec 2404 us | TPR 0.67 | FPR 0.00 | MER  43.1% | Peak  3.99 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.33 | FPR 0.00 | MER  14.5% | Peak  3.98 Hz
+> Hampel Filter   : Exec 2497 us | TPR 0.67 | FPR 0.02 | MER  24.1% | Peak  3.99 Hz
+>> Cloud Link   : TTN Uplink SUCCESS
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.01
+>> E2E Latency  : 5687 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (1/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 15
+> Unfiltered Peak :  3.99 Hz
+> Z-Score Filter  : Exec  456 us | TPR 0.50 | FPR 0.00 | MER  17.1% | Peak  3.99 Hz
+> Hampel Filter   : Exec 2358 us | TPR 1.00 | FPR 0.02 | MER  23.7% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  649 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec 3637 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  3.99 Hz
+>> Avg Value    : -0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+> Z-Score Filter  : Exec  950 us | TPR 1.00 | FPR 0.00 | MER  39.7% | Peak  4.01 Hz
+>> Cloud Link   : TTN Duty Cycle Paused (2/6)
+==================================================
+> Hampel Filter   : Exec 3674 us | TPR 1.00 | FPR 0.00 | MER  39.4% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.05 Hz
+> Z-Score Filter  : Exec  650 us | TPR 1.00 | FPR 0.00 | MER  36.9% | Peak  4.02 Hz
+> Hampel Filter   : Exec 3620 us | TPR 1.00 | FPR 0.00 | MER  37.5% | Peak  4.02 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  647 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec 3582 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.01 | Window: 31
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  647 us | TPR 1.00 | FPR 0.00 | MER  35.0% | Peak  4.00 Hz
+> Hampel Filter   : Exec 3573 us | TPR 1.00 | FPR 0.00 | MER  32.9% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (3/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  4.03 Hz
+> Z-Score Filter  : Exec  326 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.03 Hz
+> Hampel Filter   : Exec  656 us | TPR 0.50 | FPR 0.02 | MER  44.4% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  4.03 Hz
+> Z-Score Filter  : Exec  325 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.03 Hz
+> Hampel Filter   : Exec  647 us | TPR 0.70 | FPR 0.00 | MER  60.2% | Peak  4.02 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  3.99 Hz
+> Z-Score Filter  : Exec  327 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.99 Hz
+> Hampel Filter   : Exec  651 us | TPR 0.67 | FPR 0.00 | MER  49.3% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.04
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (4/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  4.02 Hz
+> Z-Score Filter  : Exec  326 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.02 Hz
+> Hampel Filter   : Exec  658 us | TPR 0.70 | FPR 0.00 | MER  56.6% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 5
+> Unfiltered Peak :  4.06 Hz
+> Z-Score Filter  : Exec  327 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.06 Hz
+> Hampel Filter   : Exec  662 us | TPR 0.56 | FPR 0.01 | MER  46.3% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  4.16 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.20 | FPR 0.00 | MER  20.3% | Peak  4.09 Hz
+> Hampel Filter   : Exec 2284 us | TPR 0.60 | FPR 0.00 | MER  46.1% | Peak  4.04 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.04
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (5/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  4.06 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.22 | FPR 0.00 | MER  23.7% | Peak  4.07 Hz
+> Hampel Filter   : Exec 2360 us | TPR 0.67 | FPR 0.00 | MER  56.2% | Peak  4.03 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  448 us | TPR 1.00 | FPR 0.00 | MER  38.1% | Peak  4.01 Hz
+> Hampel Filter   : Exec 2432 us | TPR 1.00 | FPR 0.01 | MER  31.5% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  4.06 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.14 | FPR 0.00 | MER  11.3% | Peak  4.07 Hz
+> Hampel Filter   : Exec 2441 us | TPR 0.43 | FPR 0.01 | MER  22.9% | Peak  4.07 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 15
+> Unfiltered Peak :  3.94 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.40 | FPR 0.00 | MER  39.8% | Peak  3.96 Hz
+> Hampel Filter   : Exec 2367 us | TPR 1.00 | FPR 0.00 | MER  66.0% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.04
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.09 Hz
+> Z-Score Filter  : Exec  649 us | TPR 0.83 | FPR 0.00 | MER  52.6% | Peak  4.04 Hz
+> Hampel Filter   : Exec 3590 us | TPR 0.83 | FPR 0.00 | MER  50.3% | Peak  4.03 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.04 Hz
+> Z-Score Filter  : Exec  647 us | TPR 0.67 | FPR 0.00 | MER  41.0% | Peak  4.02 Hz
+> Hampel Filter   : Exec 3596 us | TPR 0.33 | FPR 0.00 | MER  19.9% | Peak  4.00 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.02 Hz
+> Z-Score Filter  : Exec  649 us | TPR 0.40 | FPR 0.00 | MER  20.5% | Peak  4.00 Hz
+> Hampel Filter   : Exec 3591 us | TPR 0.40 | FPR 0.00 | MER  19.5% | Peak  4.00 Hz
+>> Cloud Link   : TTN Uplink SUCCESS
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.03
+>> E2E Latency  : 5687 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (1/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  3.97 Hz
+> Z-Score Filter  : Exec  649 us | TPR 0.33 | FPR 0.00 | MER  23.2% | Peak  3.98 Hz
+> Hampel Filter   : Exec 3685 us | TPR 0.67 | FPR 0.00 | MER  38.2% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.05 | Window: 31
+> Unfiltered Peak :  4.06 Hz
+> Z-Score Filter  : Exec  647 us | TPR 0.17 | FPR 0.00 | MER  15.0% | Peak  4.05 Hz
+> Hampel Filter   : Exec 3578 us | TPR 0.67 | FPR 0.00 | MER  40.0% | Peak  4.04 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  3.98 Hz
+> Z-Score Filter  : Exec  321 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.98 Hz
+> Hampel Filter   : Exec  646 us | TPR 0.71 | FPR 0.00 | MER  61.7% | Peak  3.90 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (2/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  4.19 Hz
+> Z-Score Filter  : Exec  319 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.19 Hz
+> Hampel Filter   : Exec  663 us | TPR 0.36 | FPR 0.01 | MER  33.1% | Peak  4.08 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  3.93 Hz
+> Z-Score Filter  : Exec  324 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.93 Hz
+> Hampel Filter   : Exec  658 us | TPR 0.78 | FPR 0.01 | MER  62.2% | Peak  3.94 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  3.96 Hz
+> Z-Score Filter  : Exec  322 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.96 Hz
+> Hampel Filter   : Exec  644 us | TPR 0.81 | FPR 0.01 | MER  74.2% | Peak  3.98 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 5
+> Unfiltered Peak :  4.00 Hz
+> Z-Score Filter  : Exec  327 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  4.00 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+> Hampel Filter   : Exec  709 us | TPR 0.71 | FPR 0.02 | MER  54.2% | Peak  3.98 Hz
+>> Avg Value    : 0.01
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (3/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  3.94 Hz
+> Z-Score Filter  : Exec  452 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.94 Hz
+> Hampel Filter   : Exec 2230 us | TPR 0.53 | FPR 0.00 | MER  41.5% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  3.82 Hz
+> Z-Score Filter  : Exec  449 us | TPR 0.21 | FPR 0.00 | MER  19.8% | Peak  3.92 Hz
+> Hampel Filter   : Exec 2320 us | TPR 0.64 | FPR 0.00 | MER  51.2% | Peak  3.91 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  455 us | TPR 0.33 | FPR 0.00 | MER  30.2% | Peak  4.03 Hz
+> Hampel Filter   : Exec 2307 us | TPR 0.67 | FPR 0.02 | MER  50.9% | Peak  3.95 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.02
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (4/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  3.98 Hz
+> Z-Score Filter  : Exec  450 us | TPR 0.13 | FPR 0.00 | MER  13.2% | Peak  4.02 Hz
+> Hampel Filter   : Exec 2248 us | TPR 0.53 | FPR 0.01 | MER  43.4% | Peak  4.06 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 15
+> Unfiltered Peak :  3.89 Hz
+> Z-Score Filter  : Exec  450 us | TPR 0.00 | FPR 0.00 | MER   0.0% | Peak  3.89 Hz
+> Hampel Filter   : Exec 2236 us | TPR 0.56 | FPR 0.00 | MER  47.5% | Peak  4.01 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.07 Hz
+> Z-Score Filter  : Exec  652 us | TPR 0.27 | FPR 0.00 | MER  22.6% | Peak  4.02 Hz
+> Hampel Filter   : Exec 3546 us | TPR 0.36 | FPR 0.00 | MER  29.5% | Peak  3.99 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.05
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (5/6)
+==================================================
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.08 Hz
+> Z-Score Filter  : Exec  645 us | TPR 0.21 | FPR 0.00 | MER  17.4% | Peak  4.04 Hz
+> Hampel Filter   : Exec 3554 us | TPR 0.64 | FPR 0.00 | MER  52.9% | Peak  4.04 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.01 Hz
+> Z-Score Filter  : Exec  650 us | TPR 0.30 | FPR 0.00 | MER  24.0% | Peak  4.04 Hz
+> Hampel Filter   : Exec 3586 us | TPR 0.30 | FPR 0.00 | MER  22.9% | Peak  4.02 Hz
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.10 Hz
+> Z-Score Filter  : Exec  646 us | TPR 0.17 | FPR 0.00 | MER  14.7% | Peak  4.24 Hz
+> Hampel Filter   : Exec 3540 us | TPR 0.50 | FPR 0.00 | MER  48.0% | Peak  4.03 Hz
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.03
+>> E2E Latency  : 4950 ms
+>> FFT Peak     : 4.03 Hz
+>> Sampling At  : 11 Hz
+>> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+
+[BONUS 8.2] -------------------------------------
+Filter Benchmark | Prob: 0.10 | Window: 31
+> Unfiltered Peak :  4.08 Hz
+> Z-Score Filter  : Exec  663 us | TPR 0.13 | FPR 0.00 | MER  12.2% | Peak  4.07 Hz
+> Hampel Filter   : Exec 3628 us | TPR 0.40 | FPR 0.00 | MER  33.0% | Peak  4.00 Hz
