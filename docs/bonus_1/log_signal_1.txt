@@ -2,7 +2,7 @@
 === IoT System Booting ===
 ==================================================
 [SYSTEM] Hardware ADC Benchmark Started...
-[SYSTEM] Max Hardware Rate : 16151 Hz
+[SYSTEM] Max Hardware Rate : 16155 Hz
 [SYSTEM] Init Sampling Rate: 100 Hz
 
 [WIFI] Connecting.......
@@ -12,77 +12,121 @@
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.08
->> E2E Latency  : 6052 ms
->> FFT Peak     : 4.00 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+E (32828) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (32828) task_wdt:  - IDLE0 (CPU 0)
+E (32828) task_wdt: Tasks currently running:
+E (32828) task_wdt: CPU 0: Tx
+E (32828) task_wdt: CPU 1: IDLE1
+E (32828) task_wdt: Aborting.
+
+abort() was called at PC 0x42019fb8 on core 0
+
+
+Backtrace: 0x4037735a:0x3fc94d70 0x4037c231:0x3fc94d90 0x4038209d:0x3fc94db0 0x42019fb8:0x3fc94e30 0x40378a0d:0x3fc94e50 0x400559dd:0x3fcac300 0x4037f57a:0x3fcac310 0x4037cda5:0x3fcac330 0x42034daa:0x3fcac370 0x42024e0e:0x3fcac390 0x42025546:0x3fcac3b0 0x42025562:0x3fcac3d0 0x42026c4e:0x3fcac3f0 0x4200a601:0x3fcac410 0x4200a627:0x3fcac440 0x420046fc:0x3fcac480 0x4200476e:0x3fcac4c0 0x42003402:0x3fcac4f0
+
+
+
+
+ELF file SHA256: 6dc6b09e615f613c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376f68
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x4bc
+load:0x403c9700,len:0xbd8
+load:0x403cc700,len:0x2a0c
+entry 0x403c98d0
+
+
+==================================================
+=== IoT System Booting ===
+==================================================
+[SYSTEM] Hardware ADC Benchmark Started...
+[SYSTEM] Max Hardware Rate : 16147 Hz
+[SYSTEM] Init Sampling Rate: 100 Hz
+
+[WIFI] Connecting.......
+[WIFI] Connected.
+[LoRaWAN] Attempting background TTN Join...
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.42
+>> E2E Latency  : 6054 ms
+>> FFT Peak     : 0.95 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (1/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.01
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.00 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 0.95 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (2/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.01
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (3/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.04
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (4/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.02
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (5/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.04
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Uplink SUCCESS
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.01
->> E2E Latency  : 5641 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 5674 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (1/6)
 ==================================================
 
@@ -90,183 +134,196 @@
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
 >> Avg Value    : 0.00
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (2/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.01
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (3/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.05
->> E2E Latency  : 6236 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (4/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.01
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (5/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.04
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
->> Cloud Link   : TTN Uplink FAILED (-7)
-==================================================
-
-==================================================
-[EDGE NODE] 5-Second Window Aggregation
---------------------------------------------------
->> Avg Value    : 0.00
->> E2E Latency  : 8681 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
->> Cloud Link   : TTN Duty Cycle Paused (1/6)
-==================================================
-
-==================================================
-[EDGE NODE] 5-Second Window Aggregation
---------------------------------------------------
->> Avg Value    : 0.00
->> E2E Latency  : 6675 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
->> Cloud Link   : TTN Duty Cycle Paused (2/6)
-==================================================
-
-==================================================
-[EDGE NODE] 5-Second Window Aggregation
---------------------------------------------------
->> Avg Value    : 0.00
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
->> Cloud Link   : TTN Duty Cycle Paused (3/6)
-==================================================
-
-==================================================
-[EDGE NODE] 5-Second Window Aggregation
---------------------------------------------------
->> Avg Value    : -0.04
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
->> Cloud Link   : TTN Duty Cycle Paused (4/6)
-==================================================
-
-==================================================
-[EDGE NODE] 5-Second Window Aggregation
---------------------------------------------------
->> Avg Value    : -0.01
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
->> Cloud Link   : TTN Duty Cycle Paused (5/6)
-==================================================
-
-==================================================
-[EDGE NODE] 5-Second Window Aggregation
---------------------------------------------------
->> Avg Value    : 0.05
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Uplink SUCCESS
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.02
->> E2E Latency  : 8684 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 5675 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (1/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.01
->> E2E Latency  : 6678 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (2/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.01
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (3/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.03
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (4/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : -0.03
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
 >> Cloud Link   : TTN Duty Cycle Paused (5/6)
 ==================================================
 
 ==================================================
 [EDGE NODE] 5-Second Window Aggregation
 --------------------------------------------------
->> Avg Value    : 0.05
->> E2E Latency  : 4950 ms
->> FFT Peak     : 4.03 Hz
->> Sampling At  : 11 Hz
->> Data Volume  : 220 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Uplink SUCCESS
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 5674 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (1/6)
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (2/6)
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (3/6)
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (4/6)
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : 0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (5/6)
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 4900 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Uplink SUCCESS
+==================================================
+
+==================================================
+[EDGE NODE] 5-Second Window Aggregation
+--------------------------------------------------
+>> Avg Value    : -0.00
+>> E2E Latency  : 5673 ms
+>> FFT Peak     : 1.01 Hz
+>> Sampling At  : 10 Hz
+>> Data Volume  : 200 bytes (Adaptive) vs 2000 bytes (Raw)
+>> Cloud Link   : TTN Duty Cycle Paused (1/6)
+==================================================
