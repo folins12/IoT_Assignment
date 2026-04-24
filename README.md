@@ -50,7 +50,7 @@ The system analyzes the signal's spectral density every 128 samples to adjust th
 | **Mode 2 (Base)** | 4.0 Hz | 4.03 Hz | **11 Hz** |
 | **Mode 3 (Fast)** | 35.0 Hz | 35.23 Hz | **90 Hz**  |
 
-**Logic Applied:** $f_s = (f_{max} \times 2.5) + 1$. This ensures the system stays above the Nyquist limit.
+**Logic Applied:** $f_s = (f_{max} \times 2.5)$. This ensures the system stays above the Nyquist limit.
 
 ## 3. Communication & Network Efficiency
 The aggregation process (5-second window) transforms high-frequency raw data into a single efficient payload.
