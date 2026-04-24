@@ -1,6 +1,6 @@
 # IoT Individual Assignment - Andrea Folino
 
-This IoT system basically collects sensor data, computes Fast Fourier Transform, and dynamically adapts its sampling frequency to minimize energy consumption. Aggregated data is transmitted to the edge (MQTT) and the cloud (LoRaWAN/TTN).
+This IoT system basically collects sensor data, computes Fast Fourier Transform, and dynamically adapts its sampling frequency. Aggregated data is transmitted to the edge (MQTT) and the cloud (LoRaWAN/TTN).
 
 ## Hardware Setup
 This project requires two **Heltec WiFi LoRa 32 V3** boards:
@@ -24,7 +24,7 @@ This project is built with **PlatformIO**.
 
 1. Update `src/credentials.h` with your Wi-Fi SSID/Password and TTN keys.
 2. In `src/main.cpp`, you can configure the behavior:
-   * `#define SIGNAL_MODE` (Switches between Base (1), Slow (2), and Fast (3) input signals).
+   * `#define SIGNAL_MODE` (Switches between Base (2), Slow (1), and Fast (3) input signals).
    * `#define RUN_BONUS_8_2` (Enables (1) anomaly filtering benchmark task).
 3. Open the PlatformIO Core CLI or UI:
    * Upload to the main board: `pio run -e target -t upload`
@@ -44,11 +44,11 @@ Before initializing the FreeRTOS scheduler, the system established its physical 
 ## 2. Dynamic Frequency Adaptation (FFT)
 The system analyzes the signal's spectral density every 128 samples to adjust the sensing duty cycle.
 
-| Signal Mode | Physical Freq | FFT Peak Detected | Adapted Sampling | Power State |
-| :--- | :--- | :--- | :--- | :--- |
-| **Mode 1 (Slow)** | 1.0 Hz | 1.01 Hz | **10 Hz** | Deep Idle |
-| **Mode 2 (Base)** | 4.0 Hz | 4.03 Hz | **11 Hz** | Balanced |
-| **Mode 3 (Fast)** | 35.0 Hz | 35.23 Hz | **90 Hz** | Active |
+| Signal Mode | Physical Freq | FFT Peak Detected | Adapted Sampling |  
+| :--- | :--- | :--- | :--- | 
+| **Mode 1 (Slow)** | 1.0 Hz | 1.01 Hz | **10 Hz** |
+| **Mode 2 (Base)** | 4.0 Hz | 4.03 Hz | **11 Hz** |
+| **Mode 3 (Fast)** | 35.0 Hz | 35.23 Hz | **90 Hz**  |
 
 **Logic Applied:** $f_s = (f_{peak} \times 2.5) + 1$. This ensures the system stays above the Nyquist limit.
 
@@ -57,7 +57,7 @@ The aggregation process (5-second window) transforms high-frequency raw data int
 
 * **Payload Compression:** A raw 100 Hz stream generates 500 floats (2,000 bytes) every 5 seconds. By adapting the frequency to 11 Hz, the raw stream drops to 220 bytes. Our edge aggregation further reduces this to **4 bytes** (a single float), a **99.8% reduction** in network overhead.
 * **End-to-End Latency:** * **MQTT (WiFi):** Stable at **~4950 ms** (this matches the exact 5-second buffer aggregation time).
-    * **LoRaWAN (TTN):** Latency spikes up to **6,000-8,600 ms** during Join procedures or uplink windows due to the radio hardware's blocking nature on the SPI bus.
+    * **LoRaWAN (TTN):** Latency spikes up to **6,000-6,600 ms** during Join procedures or uplink windows due to the radio hardware's blocking nature on the SPI bus.
 
 ## 4. Power Consumption Diagnostics
 Logs from the INA219 sensor reveal a direct correlation between system tasks and energy absorption. Calculations are based on a **3.7V** LiPo battery source:
@@ -104,7 +104,7 @@ The system was tested against 9 unique configurations to characterize the trade-
 | | | Hampel | **0.70** | 0.00 | **63.1%** | ~665 µs | 4.03 Hz |
 | **0.10 (10%)** | **15** | Z-Score | 0.17 | 0.00 | 13.0% | ~330 µs | 4.10 Hz |
 | | | Hampel | **0.55** | 0.00 | **48.3%** | ~2,300 µs | 4.01 Hz |
-| **0.10 (10%)** | **31** | Z-Score | 0.15 | 0.00 | 19.1% | ~650 µs* | 4.15 Hz |
+| **0.10 (10%)** | **31** | Z-Score | 0.15 | 0.00 | 19.1% | ~650 µs | 4.15 Hz |
 | | | Hampel | **0.38** | 0.00 | **36.4%** | ~3,570 µs | 4.02 Hz |
 
 
@@ -136,7 +136,7 @@ The system was tested against 9 unique configurations to characterize the trade-
 4. **Choosing the Right Edge MQTT Broker:**
    "I need a public MQTT broker for testing an IoT university assignment. I am using an ESP32 with the PubSubClient library. What are the best public options. Why is HiveMQ a good choice for reliable edge communication?"
 
-### 5.1 Opportunities and Limitations
+## Opportunities and Limitations
 
 Based on the specific prompts issued during development, the following observations were made regarding the LLM's capabilities as an engineering co-pilot:
 
